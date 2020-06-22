@@ -158,17 +158,120 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Maven配置教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Maven%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/">Maven配置教程</a>
+    </h1>
+  
+
+        
+        <a href="/Maven%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/" class="archive-article-date">
+  	<time datetime="2020-06-22T08:37:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h1 id="Maven配置教程"><a href="#Maven配置教程" class="headerlink" title="Maven配置教程"></a>Maven配置教程</h1><p><strong>Maven配置需要JDK，所以在下载前，请先安装好JDK。Maven的下载地址中也提到Maven3.3版本及以上需要JDK1.7版本以上的支持</strong></p>
+<h2 id="一-Maven下载"><a href="#一-Maven下载" class="headerlink" title="一.Maven下载"></a>一.Maven下载</h2><p>在Maven的官网即可下载，点击访问<a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">Apache Maven</a>。</p>
+<p><img src="img/Maven%E4%B8%8B%E8%BD%BD.png" alt="Maven下载"></p>
+<p>下载完解压即可。</p>
+<h2 id="二、环境变量配置"><a href="#二、环境变量配置" class="headerlink" title="二、环境变量配置"></a>二、环境变量配置</h2><h3 id="1-添加M-HOME：对应的MAVEN解压目录"><a href="#1-添加M-HOME：对应的MAVEN解压目录" class="headerlink" title="1.添加M_HOME：对应的MAVEN解压目录"></a>1.添加M_HOME：对应的MAVEN解压目录<img src="img/%E6%96%B0%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F.png" alt="新建系统变量"></h3><h3 id="2-修改系统变量中的Path"><a href="#2-修改系统变量中的Path" class="headerlink" title="2.修改系统变量中的Path"></a>2.修改系统变量中的Path</h3><p><img src="img/Path%E8%B7%AF%E5%BE%84%E9%85%8D%E7%BD%AE.png" alt="Path路径配置"></p>
+<p>在cmd中输入mvn -v可看到配置完毕的路径</p>
+<p><img src="img/%E9%85%8D%E7%BD%AE%E8%B7%AF%E5%BE%84.png" alt="配置路径"></p>
+<h2 id="三、修改配置文件settings"><a href="#三、修改配置文件settings" class="headerlink" title="三、修改配置文件settings"></a>三、修改配置文件settings</h2><p>我们修改的是目录下/conf/settings.xml文件</p>
+<h3 id="1-本地仓库位置修改（路径位置为本地自己设置的仓库位置）"><a href="#1-本地仓库位置修改（路径位置为本地自己设置的仓库位置）" class="headerlink" title="1.本地仓库位置修改（路径位置为本地自己设置的仓库位置）"></a>1.本地仓库位置修改（路径位置为本地自己设置的仓库位置）</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- localRepository</span></span><br><span class="line"><span class="comment">   | The path to the local repository maven will use to store artifacts.</span></span><br><span class="line"><span class="comment">   |</span></span><br><span class="line"><span class="comment">   | Default: $&#123;user.home&#125;/.m2/repository</span></span><br><span class="line"><span class="comment">  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</span></span><br><span class="line"><span class="comment">  --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>E:\Maven\apache-maven-3.6.3\repo<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>2.修改maven默认的jdk版本</p>
+<h3 id="在-lt-profiles-gt-标签下添加一个-lt-profile-gt-标签，修改maven默认的JDK版本"><a href="#在-lt-profiles-gt-标签下添加一个-lt-profile-gt-标签，修改maven默认的JDK版本" class="headerlink" title="在&lt;profiles&gt;标签下添加一个&lt;profile&gt;标签，修改maven默认的JDK版本"></a>在&lt;<strong>profiles</strong>&gt;标签下添加一个&lt;<strong>profile</strong>&gt;标签，修改maven默认的JDK版本</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">profile</span>&gt;</span>     </span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>JDK-1.8<span class="tag">&lt;/<span class="name">id</span>&gt;</span>       </span><br><span class="line">    <span class="tag">&lt;<span class="name">activation</span>&gt;</span>       </span><br><span class="line">        <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span>       </span><br><span class="line">        <span class="tag">&lt;<span class="name">jdk</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">jdk</span>&gt;</span>       </span><br><span class="line">    <span class="tag">&lt;/<span class="name">activation</span>&gt;</span>       </span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span>       </span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span>       </span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span>       </span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.compilerVersion</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.compilerVersion</span>&gt;</span>       </span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span>       </span><br><span class="line"><span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-添加国内镜像源"><a href="#3-添加国内镜像源" class="headerlink" title="3.添加国内镜像源"></a>3.添加国内镜像源</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 阿里云仓库 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/repositories/central/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 中央仓库1 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>repo1<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Human Readable Name for this Mirror.<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://repo1.maven.org/maven2/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 中央仓库2 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>repo2<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Human Readable Name for this Mirror.<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://repo2.maven.org/maven2/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>到此就结束了全部的配置。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Maven//" class="article-tag-list-link color1">Maven</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/Maven%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/">看看全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-IDEA连接Mysql时出现的时区错误问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
-        <!-- 
+        
   
     <h1 itemprop="name">
       <a class="article-title" href="/IDEA%E8%BF%9E%E6%8E%A5Mysql%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%97%B6%E5%8C%BA%E9%94%99%E8%AF%AF%E9%97%AE%E9%A2%98/">IDEA连接Mysql时出现的时区错误问题</a>
     </h1>
   
- -->
+
         
         <a href="/IDEA%E8%BF%9E%E6%8E%A5Mysql%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%97%B6%E5%8C%BA%E9%94%99%E8%AF%AF%E9%97%AE%E9%A2%98/" class="archive-article-date">
   	<time datetime="2020-06-08T07:28:58.414Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-08</time>
@@ -176,7 +279,10 @@
         
       </header>
     
-     <div class="article-entry" itemprop="articleBody">
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
       
         <h1 id="IDEA连接Mysql时出现的时区错误问题"><a href="#IDEA连接Mysql时出现的时区错误问题" class="headerlink" title="IDEA连接Mysql时出现的时区错误问题"></a>IDEA连接Mysql时出现的时区错误问题</h1><h2 id="1-错误提示警告"><a href="#1-错误提示警告" class="headerlink" title="1.错误提示警告"></a>1.错误提示警告</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Server returns invalid timezone. set &#39;serverTimezone&#39;提示我们出错的内容为时区错误。</span><br></pre></td></tr></table></figure>
         
@@ -251,13 +357,13 @@
   <div class="article-inner">
     
       <header class="article-header">
-        <!-- 
+        
   
     <h1 itemprop="name">
       <a class="article-title" href="/gift%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B/">gift制作过程</a>
     </h1>
   
- -->
+
         
         <a href="/gift%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B/" class="archive-article-date">
   	<time datetime="2020-06-04T03:06:52.854Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-04</time>
@@ -265,7 +371,10 @@
         
       </header>
     
-     <div class="article-entry" itemprop="articleBody">
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
       
         <h1 id="gift制作过程"><a href="#gift制作过程" class="headerlink" title="gift制作过程"></a>gift制作过程</h1><p><strong>延续上一篇的简易制作。</strong></p>
 <p>设定上，gift 360天一年，一个月120天， 三个月为 惨 ， 雾， 尺</p>
@@ -342,13 +451,13 @@
   <div class="article-inner">
     
       <header class="article-header">
-        <!-- 
+        
   
     <h1 itemprop="name">
       <a class="article-title" href="/RPG%20%20MAKER%20%20MV%20%E6%B8%B8%E6%88%8F%E7%AE%80%E6%98%93%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/">RPG  MAKER  MV 简易制作教程</a>
     </h1>
   
- -->
+
         
         <a href="/RPG%20%20MAKER%20%20MV%20%E6%B8%B8%E6%88%8F%E7%AE%80%E6%98%93%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/" class="archive-article-date">
   	<time datetime="2020-05-29T10:16:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-29</time>
@@ -356,7 +465,10 @@
         
       </header>
     
-     <div class="article-entry" itemprop="articleBody">
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
       
         <h1 id="RPG-MAKER-MV-简易制作教程"><a href="#RPG-MAKER-MV-简易制作教程" class="headerlink" title="RPG  MAKER  MV 简易制作教程"></a>RPG  MAKER  MV 简易制作教程</h1><h2 id="1-新建一个项目"><a href="#1-新建一个项目" class="headerlink" title="1.新建一个项目"></a>1.新建一个项目</h2><h3 id="1-1创建时的名字"><a href="#1-1创建时的名字" class="headerlink" title="1.1创建时的名字"></a>1.1创建时的名字</h3><p>文件夹名：就是文件夹的名字。</p>
 <p>游戏标题会出现在游戏最开始的画面上。</p>
@@ -432,13 +544,13 @@
   <div class="article-inner">
     
       <header class="article-header">
-        <!-- 
+        
   
     <h1 itemprop="name">
       <a class="article-title" href="/RPG%20MAKER%20MV%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E8%B6%85%E7%AE%80%E6%98%93%EF%BC%89/">RPG MAKER MV的安装（超简易）</a>
     </h1>
   
- -->
+
         
         <a href="/RPG%20MAKER%20MV%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E8%B6%85%E7%AE%80%E6%98%93%EF%BC%89/" class="archive-article-date">
   	<time datetime="2020-05-29T08:16:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-29</time>
@@ -446,7 +558,10 @@
         
       </header>
     
-     <div class="article-entry" itemprop="articleBody">
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
       
         <h1 id="RPG-MAKER-MV的安装（超简易）"><a href="#RPG-MAKER-MV的安装（超简易）" class="headerlink" title="RPG MAKER MV的安装（超简易）"></a>RPG MAKER MV的安装（超简易）</h1><p>前言：既然是来找安装资源的，就不要说什么盗版正版了。有钱请自觉支持正版！</p>
 <p>1.下载底下网盘链接的资源</p>
@@ -606,11 +721,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">RPG Maker MV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
             
             <div class="clearfix"></div>
