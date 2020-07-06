@@ -6,42 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>CentOS6.7搭建Hadoop-3.2.1 | 球球狸的老人博客</title>
+  <title>RPG MAKER MV的安装（超简易） | 球球狸的老人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CentOS6.7搭建Hadoop-3.2.1[TOC] 一.Hadoop集群1.克隆原先的CentOS">
+  <meta name="description" content="前言：既然是来找安装资源的，就不要说什么盗版正版了。有钱请自觉支持正版！ 1.下载底下网盘链接的资源 2.解压缩文件，随便放在哪个目录下都可以 3.运行解压后文件夹下的f4-rpgmv161-setup.exe文件（资源来源于3dm） 3dm资源链接：https:&#x2F;&#x2F;dl.3dmgame.com&#x2F;patch&#x2F;144140.html 转存后网盘链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS6.7搭建Hadoop-3.2.1">
-<meta property="og:url" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/index.html">
+<meta property="og:title" content="RPG MAKER MV的安装（超简易）">
+<meta property="og:url" content="http://yoursite.com/assects/mdrepository/RPG%20MAKER%20MV%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E8%B6%85%E7%AE%80%E6%98%93%EF%BC%89/index.html">
 <meta property="og:site_name" content="球球狸的老人博客">
-<meta property="og:description" content="CentOS6.7搭建Hadoop-3.2.1[TOC] 一.Hadoop集群1.克隆原先的CentOS">
+<meta property="og:description" content="前言：既然是来找安装资源的，就不要说什么盗版正版了。有钱请自觉支持正版！ 1.下载底下网盘链接的资源 2.解压缩文件，随便放在哪个目录下都可以 3.运行解压后文件夹下的f4-rpgmv161-setup.exe文件（资源来源于3dm） 3dm资源链接：https:&#x2F;&#x2F;dl.3dmgame.com&#x2F;patch&#x2F;144140.html 转存后网盘链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%97%A0%E6%9D%83%E9%99%90.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/sudoers.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/root%E4%B8%8B%E6%B7%BB%E5%8A%A0fzl.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/%E7%BD%91%E7%BB%9C%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/IP%E5%9C%B0%E5%9D%80%E9%A1%B5%E9%9D%A2.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/ip%E6%AD%A3%E7%A1%AE.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/%E6%AD%A3%E5%B8%B8%E6%8E%A5%E6%94%B6%E6%95%B0%E6%8D%AE.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/ssh%E6%9C%8D%E5%8A%A1.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/Putty%E4%BD%BF%E7%94%A8.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/putty%E7%99%BB%E5%BD%95.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/ssh%E5%85%8D%E5%AF%86.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/%E7%A7%81%E9%92%A5%E5%92%8C%E5%85%AC%E9%92%A5.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/%E5%A4%8D%E5%88%B6%E5%85%AC%E9%92%A5%E5%88%B0hadoop02.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/%E8%BD%AC%E6%8D%A2hadoop.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/%E5%88%A0%E9%99%A4%E6%97%A7%E7%89%88java.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/%E6%96%B0%E7%89%88java.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/hadoop%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/%E8%84%9A%E6%9C%AC%E4%B8%80%E9%94%AE%E5%90%AF%E5%8A%A8%E9%94%99%E8%AF%AF.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/HDFS%E7%9A%84UI.png">
-<meta property="og:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/YARN%E7%9A%84UI.png">
-<meta property="article:published_time" content="2020-07-05T16:24:56.000Z">
-<meta property="article:modified_time" content="2020-07-05T16:29:56.060Z">
+<meta property="article:published_time" content="2020-05-29T08:16:32.000Z">
+<meta property="article:modified_time" content="2020-07-06T04:42:20.454Z">
 <meta property="article:author" content="球球狸">
-<meta property="article:tag" content="CentOS6.7 hadoop3.2.1">
+<meta property="article:tag" content="RPG Maker MV">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA.png">
   
     <link rel="alternative" href="/atom.xml" title="球球狸的老人博客" type="application/atom+xml">
   
@@ -181,20 +159,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CentOS6.7搭建Hadoop-3.2.1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-RPG MAKER MV的安装（超简易）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      CentOS6.7搭建Hadoop-3.2.1
+      RPG MAKER MV的安装（超简易）
     </h1>
   
 
         
-        <a href="/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/" class="archive-article-date">
-  	<time datetime="2020-07-05T16:24:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
+        <a href="/assects/mdrepository/RPG%20MAKER%20MV%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E8%B6%85%E7%AE%80%E6%98%93%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-05-29T08:16:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-29</time>
 </a>
         
       </header>
@@ -204,178 +182,12 @@
       
       <!---->
       
-        <h1 id="CentOS6-7搭建Hadoop-3-2-1"><a href="#CentOS6-7搭建Hadoop-3-2-1" class="headerlink" title="CentOS6.7搭建Hadoop-3.2.1"></a>CentOS6.7搭建Hadoop-3.2.1</h1><p>[TOC]</p>
-<h2 id="一-Hadoop集群"><a href="#一-Hadoop集群" class="headerlink" title="一.Hadoop集群"></a>一.Hadoop集群</h2><h3 id="1-克隆原先的CentOS"><a href="#1-克隆原先的CentOS" class="headerlink" title="1.克隆原先的CentOS"></a>1.克隆原先的CentOS</h3><a id="more"></a>
-
-<p><img src="img/%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA.png" alt="克隆虚拟机.png"></p>
-<h3 id="2-打开虚拟机01，登录账号"><a href="#2-打开虚拟机01，登录账号" class="headerlink" title="2.打开虚拟机01，登录账号"></a>2.打开虚拟机01，登录账号</h3><h3 id="3-终端修改主机名"><a href="#3-终端修改主机名" class="headerlink" title="3.终端修改主机名"></a>3.终端修改主机名</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">此时我们需要修改主机名为hadoop02，但是它会提示network文件只有只读的权限。所以我们需要进入root用户中给我们的用户添加权限，用于修改Network的只读属性。</span><br></pre></td></tr></table></figure>
-
-<p><img src="img/%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%97%A0%E6%9D%83%E9%99%90.png" alt="修改文件无权限"></p>
-<p>在终端中输入<strong>su root</strong></p>
-<p>![su root](img/su root.png)</p>
-<p>然后进入<strong>sudoers</strong>中修改（sudoers也同样是只读权限）</p>
-<p><img src="img/sudoers.png" alt="sudoers"></p>
-<p>在命令行模式下，将光标移动到<strong>root ALL=(ALL) ALL</strong>行首，按<strong>yy</strong>复制行，在下一行按<strong>p</strong>粘贴，将<strong>root</strong>改为需要给予sudo权限的用户名称即可。注意，退出时需要强制保存退出（<strong>:wq!</strong>）</p>
-<p><img src="img/root%E4%B8%8B%E6%B7%BB%E5%8A%A0fzl.png" alt="root下添加fzl"></p>
-<p>在<strong>chmod 777 -R /etc/sysconfig/network</strong>的前面加上<strong>sudo</strong>,即可修改权限</p>
-<p><strong>vim /etc/sysconfig/network</strong>，按下i插入，修改主机名为hadoop02，按下esc，:wq保存并退出</p>
-<p>到此主机名就修改成功了，另一台克隆机也是如此。</p>
-<h3 id="4-修改IP映射地址（编辑中查询IP地址）"><a href="#4-修改IP映射地址（编辑中查询IP地址）" class="headerlink" title="4.修改IP映射地址（编辑中查询IP地址）"></a>4.修改IP映射地址（编辑中查询IP地址）</h3><p>vim /etc/hosts,添加以下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">192.168.133.134 hadoop01</span><br><span class="line">192.168.133.135 hadoop02</span><br><span class="line">192.168.133.136 hadoop03</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-网络参数配置"><a href="#5-网络参数配置" class="headerlink" title="5.网络参数配置"></a>5.网络参数配置</h3><p>终端中输入</p>
-<p>vim /etc/udev/rules.d/70-persistent-net.rules</p>
-<p><img src="img/%E7%BD%91%E7%BB%9C%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE.png" alt="网络参数配置"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">修改eth0中的ATTR（address）00:0C:29:2E:54:A1</span><br><span class="line">删除eth1</span><br></pre></td></tr></table></figure>
-
-<p>6.修改IP地址文件</p>
-<p>vim /etc/sysconfig/network-scripts/ifcfg-eth0</p>
-<p>打开虚拟机的IP地址页面（<strong>IP与设置的主机名相对应，MAC地址也要与虚拟机的相对应</strong>）</p>
-<p><img src="img/IP%E5%9C%B0%E5%9D%80%E9%A1%B5%E9%9D%A2.png" alt="IP地址页面"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">需要修改的有BOOTPROTO，HWADDR，IPADDR，GATEWAY，NETMASK，DNS1（BOOTPROTO要是没有修改为static会导致虚拟机之间ping不通。）</span><br></pre></td></tr></table></figure>
-
-<p>然后命令行<strong>reboot</strong>重启CentOS</p>
-<p>输入，<strong>ifconfig</strong>查看端口是否正确。输入<strong>ping <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></strong>查看是否可以正常接收数据</p>
-<p><img src="img/ip%E6%AD%A3%E7%A1%AE.png" alt="ip正确"></p>
-<p><img src="img/%E6%AD%A3%E5%B8%B8%E6%8E%A5%E6%94%B6%E6%95%B0%E6%8D%AE.png" alt="正常接收数据"></p>
-<h2 id="二-SSH服务配置"><a href="#二-SSH服务配置" class="headerlink" title="二.SSH服务配置"></a>二.SSH服务配置</h2><h3 id="1-安装SSH"><a href="#1-安装SSH" class="headerlink" title="1.安装SSH"></a>1.安装SSH</h3><p>rpm -qa | grep ssh 查看是否安装了ssh，ps -e | grep sshd查看SSH服务是否启动</p>
-<p><img src="img/ssh%E6%9C%8D%E5%8A%A1.png" alt="ssh服务"></p>
-<p>如果没有安装ssh，CentOS系统下可以执行 <strong>yum install openssh-server</strong></p>
-<h3 id="2-Putty（需注意putty并不支持lrzsz，上传与下载都无法运行，因此后面转用SecureCRT）"><a href="#2-Putty（需注意putty并不支持lrzsz，上传与下载都无法运行，因此后面转用SecureCRT）" class="headerlink" title="2.Putty（需注意putty并不支持lrzsz，上传与下载都无法运行，因此后面转用SecureCRT）"></a>2.Putty（需注意putty并不支持lrzsz，上传与下载都无法运行，因此后面转用SecureCRT）</h3><p>我们通过<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank" rel="noopener">Putty</a>来连接虚拟机服务器，没有安装的话，可以通过超链接下一个。</p>
-<p><img src="img/Putty%E4%BD%BF%E7%94%A8.png" alt="Putty使用"></p>
-<p>‘open’打开之后，会出现这样的界面，我们输入root（最高权限）（或者你自己在虚拟机上设置的用户名），然后按下enter，输入密码即可登录成功。</p>
-<p><img src="img/putty%E7%99%BB%E5%BD%95.png" alt="putty登录"></p>
-<h3 id="3-SSH免密登录"><a href="#3-SSH免密登录" class="headerlink" title="3.SSH免密登录"></a>3.SSH免密登录</h3><h4 id="3-1使用后面会作为Hadoop集群主节点的Hadoop01生成私钥和公钥"><a href="#3-1使用后面会作为Hadoop集群主节点的Hadoop01生成私钥和公钥" class="headerlink" title="3.1使用后面会作为Hadoop集群主节点的Hadoop01生成私钥和公钥."></a>3.1使用后面会作为Hadoop集群主节点的Hadoop01生成私钥和公钥.</h4><p>输入<strong>ssh-keygen -t rsa</strong>,连续按下四次enter键确认。</p>
-<p><img src="img/ssh%E5%85%8D%E5%AF%86.png" alt="ssh免密"></p>
-<p>此时在root目录下，也就是~目录下，会出现一个.ssh的隐藏文件夹。</p>
-<p>我们进入此文件夹可以看见一个私钥<strong>（id_rsa）</strong>和一个公钥<strong>(id_rsa.pub)</strong></p>
-<p><img src="img/%E7%A7%81%E9%92%A5%E5%92%8C%E5%85%AC%E9%92%A5.png" alt="私钥和公钥"></p>
-<h4 id="3-2从hadoop01复制公钥到hadoop02和hadoop03上（hadoop02和03也是同样的步骤）"><a href="#3-2从hadoop01复制公钥到hadoop02和hadoop03上（hadoop02和03也是同样的步骤）" class="headerlink" title="3.2从hadoop01复制公钥到hadoop02和hadoop03上（hadoop02和03也是同样的步骤）"></a>3.2从hadoop01复制公钥到hadoop02和hadoop03上（hadoop02和03也是同样的步骤）</h4><p><strong>ssh-copy-id hadoop02</strong>和<strong>ssh-copy-id hadoop03</strong>和<strong>ssh-copy-id -i ~/.ssh/id_rsa.pub root@hadoop01</strong></p>
-<p><img src="img/%E5%A4%8D%E5%88%B6%E5%85%AC%E9%92%A5%E5%88%B0hadoop02.png" alt="复制公钥到hadoop02"></p>
-<p>此时公钥已经复制到了hadoop02和hadoop03上。我们可以通过<strong>ssh hadoop02</strong>和<strong>ssh hadoop03</strong>来访问这两台主机</p>
-<p><img src="img/%E8%BD%AC%E6%8D%A2hadoop.png" alt="转换hadoop"></p>
-<h2 id="三-Hadoop集群搭建"><a href="#三-Hadoop集群搭建" class="headerlink" title="三.Hadoop集群搭建"></a>三.Hadoop集群搭建</h2><h4 id="1-JDK卸载与安装"><a href="#1-JDK卸载与安装" class="headerlink" title="1.JDK卸载与安装"></a>1.JDK卸载与安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">查看jdk版本</span></span><br><span class="line">rpm -qa|grep jdk</span><br><span class="line"><span class="meta">#</span><span class="bash">删除系统自带的两个旧包</span></span><br><span class="line">rpm -e --nodeps java-1.6.0-openjdk-1.6.0.35-1.13.7.1.el6_6.x86_64</span><br><span class="line">rpm -e --nodeps java-1.7.0-openjdk-1.7.0.79-2.5.5.4.el6.x86_64</span><br><span class="line"><span class="meta">#</span><span class="bash">查看是否还有java</span></span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<p><img src="img/%E5%88%A0%E9%99%A4%E6%97%A7%E7%89%88java.png" alt="删除旧版java"></p>
-<p><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" target="_blank" rel="noopener">OracleJDK8</a>，下载jdk-8u251-linux-x64.tar.gz安装包。</p>
-<blockquote>
-<p><strong><em>(使用超过JDK8版本的JDK都会使得，Hadoop集群服务sourceManager和NodeManager服务无法启动)</em></strong></p>
-</blockquote>
-<p>在~目录下，使用<strong>mkdir /export/software</strong>新建一个文件夹，然后访问使用rz命令上传我们的jdk。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /export/software</span><br></pre></td></tr></table></figure>
-
-<p>在export目录下新建一个文件夹servers</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir servers</span><br></pre></td></tr></table></figure>
-
-<p>使用<strong>tar -zxvf jdk-11.0.7_linux-x64_bin.tar.gz  -C /export/servers</strong>解压jdk，并修改文件夹名字为jdk</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf jdk-8u251-linux-x64.tar.gz  -C /export/servers</span><br><span class="line">mv jdk1.8.0_251/ jdk</span><br></pre></td></tr></table></figure>
-
-<p>配置JDK环境变量</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p>在底部添加</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">配置环境变量</span></span><br><span class="line">export JAVA_HOME=/export/servers/jdk</span><br><span class="line"><span class="meta">#</span><span class="bash">配置环境变量</span></span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line"><span class="meta">#</span><span class="bash">配置环境变量</span></span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br></pre></td></tr></table></figure>
-
-<p>运行source /etc/profile使配置文件生效</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p><img src="img/%E6%96%B0%E7%89%88java.png" alt="新版java"></p>
-<h4 id="2-Hadoop安装"><a href="#2-Hadoop安装" class="headerlink" title="2.Hadoop安装"></a>2.Hadoop安装</h4><p>下载Hadoop3.2.1</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://downloads.apache.org/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p>解压hadoop到servers目录下</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf hadoop-3.2.1.tar.gz  -C /export/servers/</span><br></pre></td></tr></table></figure>
-
-<p>配置Hadoop环境变量</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p>在底部添加</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export HADOOP_HOME=/export/servers/hadoop-3.2.1</span><br><span class="line">export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p><img src="img/hadoop%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.png" alt="hadoop环境配置"></p>
-<h4 id="3-Hadoop集群配置"><a href="#3-Hadoop集群配置" class="headerlink" title="3.Hadoop集群配置"></a>3.Hadoop集群配置</h4><h5 id="3-1修改hadoop-env-sh文件"><a href="#3-1修改hadoop-env-sh文件" class="headerlink" title="3.1修改hadoop-env.sh文件"></a>3.1修改hadoop-env.sh文件</h5><p>此配置文件用于设置Hadoop运行时需要的JDK环境变量</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">从根目录下访问</span></span><br><span class="line"><span class="meta">#</span><span class="bash">注意若是访问是一步一步访问</span></span><br><span class="line"><span class="meta">#</span><span class="bash">如：</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="built_in">cd</span> /<span class="built_in">export</span>/servers</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="built_in">cd</span> hadoop-3.2.1</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="built_in">cd</span> etc(etc的前面不能带有斜杆，不然会访问到主目录下的etc)</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="built_in">cd</span> /etc(错误)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cd /export/servers/hadoop-3.2.1/etc/hadoop</span><br><span class="line">vim hadoop-env.sh</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意</strong>：此处的JAVA_HOME路径位置原先是注释掉的</p>
-<p>![Hadoop javahome](img/Hadoop javahome.png)</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/export/servers/jdk</span><br></pre></td></tr></table></figure>
-
-<h5 id="3-2修改core-site-xml文件"><a href="#3-2修改core-site-xml文件" class="headerlink" title="3.2修改core-site.xml文件"></a>3.2修改core-site.xml文件</h5><p>该文件是Hadoop的核心配置文件，目的是配置HDFS地址，端口号，以及临时文件目录</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim core-site.xml</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.defaultFS<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://192.168.133.134:9000<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">description</span>&gt;</span>192.168.1.100为服务器IP地址，其实也可以使用主机名(hdfs://hadoop01)<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>/export/servers/hadoop-3.2.1/tmp<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">description</span>&gt;</span>tmp目录用于放置临时文件<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>tmp目录并没有自动生成，所以退到hadoop-3.2.1目录下新建一个tmp目录……，<strong>mkdir tmp</strong></p>
-<h5 id="3-3修改hdfs-site-xml文件"><a href="#3-3修改hdfs-site-xml文件" class="headerlink" title="3.3修改hdfs-site.xml文件"></a>3.3修改hdfs-site.xml文件</h5><p>该文件用于设置HDFS的NameNode和DataNode两大进程。配置HDFS数据块的副本数量3，设置了second所在服务的HTTP协议地址。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim hdfs-site.xml</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>3<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">description</span>&gt;</span>分片数量，伪分布式将其配置成1即可<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.secondary.http-address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">value</span>&gt;</span>hadoop02:50090<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="3-4修改mapred-site-xml"><a href="#3-4修改mapred-site-xml" class="headerlink" title="3.4修改mapred-site.xml"></a>3.4修改mapred-site.xml</h5><p>该文件是MapReduce的核心配置文件，用于指定MapReduce运行时的框架（Hadoop3.2.1默认有这个文件）。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span> mapreduce.framework.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>yarn<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">description</span>&gt;</span>执行框架设置为Hadoop YARN<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="3-5修改yarn-site-xml文件"><a href="#3-5修改yarn-site-xml文件" class="headerlink" title="3.5修改yarn-site.xml文件"></a>3.5修改yarn-site.xml文件</h5><p>该文件是YARN框架的核心配置文件，需要指定YARN集群的管理者。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim yarn-site.xml</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.hostname<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>hadoop01<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.aux-services<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>mapreduce_shuffle<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.resource.cpu-vcores<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">value</span>&gt;</span>1<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.resource.memory-mb<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">value</span>&gt;</span>1024<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.scheduler.minimum-allocation-mb<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">value</span>&gt;</span>1024<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="3-6修改workers文件（hadoop3-0以前叫做slaves）"><a href="#3-6修改workers文件（hadoop3-0以前叫做slaves）" class="headerlink" title="3.6修改workers文件（hadoop3.0以前叫做slaves）"></a>3.6修改workers文件（hadoop3.0以前叫做slaves）</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vim workers</span><br><span class="line"><span class="meta">#</span><span class="bash">删除原有的localhost</span></span><br><span class="line"><span class="meta">#</span><span class="bash">添加</span></span><br><span class="line">hadoop01</span><br><span class="line">hadoop02</span><br><span class="line">hadoop03</span><br></pre></td></tr></table></figure>
-
-<h5 id="3-7将配置文件分发到其他的子节点"><a href="#3-7将配置文件分发到其他的子节点" class="headerlink" title="3.7将配置文件分发到其他的子节点"></a>3.7将配置文件分发到其他的子节点</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scp /etc/profile hadoop02:/etc/profile</span><br><span class="line">scp /etc/profile hadoop03:/etc/profile</span><br><span class="line">scp -r /export/ hadoop02:/</span><br><span class="line">scp -r /export/ hadoop03:/</span><br></pre></td></tr></table></figure>
-
-<p>在其他子节点，刷新一下配置文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
-
-<h2 id="四-Hadoop集群测试"><a href="#四-Hadoop集群测试" class="headerlink" title="四.Hadoop集群测试"></a>四.Hadoop集群测试</h2><h3 id="1-格式化文件系统"><a href="#1-格式化文件系统" class="headerlink" title="1.格式化文件系统"></a>1.格式化文件系统</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hdfs namenode -format</span><br><span class="line">或</span><br><span class="line">hadoop namenode -format</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-脚本一键启动Hadoop集群服务"><a href="#2-脚本一键启动Hadoop集群服务" class="headerlink" title="2.脚本一键启动Hadoop集群服务"></a>2.脚本一键启动Hadoop集群服务</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">start-dfs.sh</span><br><span class="line">start-yarn.sh</span><br><span class="line"><span class="meta">#</span><span class="bash">停止服务</span></span><br><span class="line">stop-dfs.sh</span><br><span class="line">stop-yarn.sh</span><br></pre></td></tr></table></figure>
-
-<p>会出现以下错误：</p>
-<p><img src="img/%E8%84%9A%E6%9C%AC%E4%B8%80%E9%94%AE%E5%90%AF%E5%8A%A8%E9%94%99%E8%AF%AF.png" alt="脚本一键启动错误"></p>
-<p>此时到hadoop-3.2.1/sbin目录中<br>start-dfs.sh，stop-dfs.sh两个文件顶部添加以下参数</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HDFS_DATANODE_USER=root</span><br><span class="line">HADOOP_SECURE_DN_USER=hdfs</span><br><span class="line">HDFS_NAMENODE_USER=root</span><br><span class="line">HDFS_SECONDARYNAMENODE_USER=root</span><br></pre></td></tr></table></figure>
-
-<p>start-yarn.sh，stop-yarn.sh两个文件顶部添加以下参数</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">YARN_RESOURCEMANAGER_USER=root</span><br><span class="line">HADOOP_SECURE_DN_USER=yarn</span><br><span class="line">YARN_NODEMANAGER_USER=root</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-单节点启动服务"><a href="#3-单节点启动服务" class="headerlink" title="3.单节点启动服务"></a>3.单节点启动服务</h3><p>hdfs –daemon start namenode</p>
-<p>开启主节点的resourcemanager和nodemanager</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hdfs --daemon start namenode</span><br><span class="line">yarn --daemon start resourcemanager</span><br></pre></td></tr></table></figure>
-
-<p>在每个节点上开启nodemanager服务</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn --daemon start nodemanager</span><br><span class="line">hdfs --daemon start datanode</span><br></pre></td></tr></table></figure>
-
-<p>在规划节点hadoop02上启动SecondaryNameNode服务</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hdfs --daemon start secondarynamenode</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>注意：一定要关闭hadoop集群服务再关机，或者是做其他的操作，否则会导致namenode和datanode的clusterID值不相同。导致下次启动服务的时候，datanodes服务启动失败</strong>。<strong>解决办法：找到之前我们放置临时文件的文件夹，即上面我们再hadoop-3.2.1目录下创建的tmp文件夹，下面有个dfs文件夹，我们将其删除。然后重新格式化(每个节点上都需要这么做一次)</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /export/servers/hadoop-3.2.1/tmp</span><br><span class="line">rm -rf dfs/</span><br><span class="line">hadoop namenode -format</span><br></pre></td></tr></table></figure>
-
-
-</blockquote>
-<h3 id="4-查看Hadoop运行状态"><a href="#4-查看Hadoop运行状态" class="headerlink" title="4.查看Hadoop运行状态"></a>4.查看Hadoop运行状态</h3><blockquote>
-<p><strong>注意：Hadoop在3.1.0版本后原先默认开放的端口50070变成了9870.</strong></p>
-</blockquote>
-<p>Hadoop集群正常启动后，默认开放9870（HDFS集群状态）和8088（YARN集群状态）端口，可以通过IP地址加端口号访问</p>
-<p>每个节点关闭防火墙</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">关闭防火墙</span></span><br><span class="line">service iptables stop</span><br><span class="line"><span class="meta">#</span><span class="bash">禁止在所有节点上开机自启的防火墙</span></span><br><span class="line">chkconfig iptables off</span><br></pre></td></tr></table></figure>
-
-<p><a href="http://192.168.133.134:9870/" target="_blank" rel="noopener">http://192.168.133.134:9870/</a></p>
-<p><a href="http://192.168.133.134:8088/" target="_blank" rel="noopener">http://192.168.133.134:8088/</a></p>
-<p>此时可以通过这两个端口访问到HDFS和YARN界面</p>
-<p>HDFS界面</p>
-<p><img src="img/HDFS%E7%9A%84UI.png" alt="HDFS的UI"></p>
-<p>YARN界面</p>
-<p><img src="img/YARN%E7%9A%84UI.png" alt="YARN的UI"></p>
+        <p>前言：既然是来找安装资源的，就不要说什么盗版正版了。有钱请自觉支持正版！</p>
+<p>1.下载底下网盘链接的资源</p>
+<p>2.解压缩文件，随便放在哪个目录下都可以</p>
+<p>3.运行解压后文件夹下的f4-rpgmv161-setup.exe文件（资源来源于3dm）</p>
+<p>3dm资源链接：<a href="https://dl.3dmgame.com/patch/144140.html" target="_blank" rel="noopener">https://dl.3dmgame.com/patch/144140.html</a></p>
+<p>转存后网盘链接：<a href="https://pan.baidu.com/s/1dFbCKGCxPK3TzD-_Fz9iYQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1dFbCKGCxPK3TzD-_Fz9iYQ</a><br>提取码：rzu1</p>
 
       
 
@@ -389,7 +201,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">CentOS6.7 hadoop3.2.1</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RPG Maker MV</a>
         		</li>
       		
 		</ul>
@@ -401,11 +213,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/虚拟机//" class="article-tag-list-link color4">虚拟机</a>
+        			<a href="/categories/资源//" class="article-tag-list-link color3">资源</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/虚拟机/Hadoop//" class="article-tag-list-link color2">Hadoop</a>
+        			<a href="/categories/资源/RPG游戏制作//" class="article-tag-list-link color3">RPG游戏制作</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/资源/RPG游戏制作/RPG-Maker-MV//" class="article-tag-list-link color3">RPG Maker MV</a>
         		</li>
       		
 		</ul>
@@ -460,7 +276,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/assects/mdrepository/RPG%20MAKER%20MV%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E8%B6%85%E7%AE%80%E6%98%93%EF%BC%89/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -474,11 +290,15 @@
   
 <nav id="article-nav">
   
-  
-    <a href="/Maven%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Maven配置教程</div>
-      <i class="icon-circle-right"></i>
+    <a href="/assects/mdrepository/RPG%20%20MAKER%20%20MV%20%E6%B8%B8%E6%88%8F%E7%AE%80%E6%98%93%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          RPG  MAKER  MV 简易制作教程
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -503,7 +323,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CentOS6-7搭建Hadoop-3-2-1"><span class="toc-number">1.</span> <span class="toc-text">CentOS6.7搭建Hadoop-3.2.1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-Hadoop集群"><span class="toc-number">1.1.</span> <span class="toc-text">一.Hadoop集群</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-克隆原先的CentOS"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.克隆原先的CentOS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-打开虚拟机01，登录账号"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.打开虚拟机01，登录账号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-终端修改主机名"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.终端修改主机名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-修改IP映射地址（编辑中查询IP地址）"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.修改IP映射地址（编辑中查询IP地址）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-网络参数配置"><span class="toc-number">1.1.5.</span> <span class="toc-text">5.网络参数配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-SSH服务配置"><span class="toc-number">1.2.</span> <span class="toc-text">二.SSH服务配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装SSH"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.安装SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Putty（需注意putty并不支持lrzsz，上传与下载都无法运行，因此后面转用SecureCRT）"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.Putty（需注意putty并不支持lrzsz，上传与下载都无法运行，因此后面转用SecureCRT）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-SSH免密登录"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.SSH免密登录</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1使用后面会作为Hadoop集群主节点的Hadoop01生成私钥和公钥"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">3.1使用后面会作为Hadoop集群主节点的Hadoop01生成私钥和公钥.</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2从hadoop01复制公钥到hadoop02和hadoop03上（hadoop02和03也是同样的步骤）"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">3.2从hadoop01复制公钥到hadoop02和hadoop03上（hadoop02和03也是同样的步骤）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三-Hadoop集群搭建"><span class="toc-number">1.3.</span> <span class="toc-text">三.Hadoop集群搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-JDK卸载与安装"><span class="toc-number">1.3.0.1.</span> <span class="toc-text">1.JDK卸载与安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Hadoop安装"><span class="toc-number">1.3.0.2.</span> <span class="toc-text">2.Hadoop安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Hadoop集群配置"><span class="toc-number">1.3.0.3.</span> <span class="toc-text">3.Hadoop集群配置</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1修改hadoop-env-sh文件"><span class="toc-number">1.3.0.3.1.</span> <span class="toc-text">3.1修改hadoop-env.sh文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2修改core-site-xml文件"><span class="toc-number">1.3.0.3.2.</span> <span class="toc-text">3.2修改core-site.xml文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3修改hdfs-site-xml文件"><span class="toc-number">1.3.0.3.3.</span> <span class="toc-text">3.3修改hdfs-site.xml文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4修改mapred-site-xml"><span class="toc-number">1.3.0.3.4.</span> <span class="toc-text">3.4修改mapred-site.xml</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-5修改yarn-site-xml文件"><span class="toc-number">1.3.0.3.5.</span> <span class="toc-text">3.5修改yarn-site.xml文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6修改workers文件（hadoop3-0以前叫做slaves）"><span class="toc-number">1.3.0.3.6.</span> <span class="toc-text">3.6修改workers文件（hadoop3.0以前叫做slaves）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-7将配置文件分发到其他的子节点"><span class="toc-number">1.3.0.3.7.</span> <span class="toc-text">3.7将配置文件分发到其他的子节点</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四-Hadoop集群测试"><span class="toc-number">1.4.</span> <span class="toc-text">四.Hadoop集群测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-格式化文件系统"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.格式化文件系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-脚本一键启动Hadoop集群服务"><span class="toc-number">1.4.2.</span> <span class="toc-text">2.脚本一键启动Hadoop集群服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-单节点启动服务"><span class="toc-number">1.4.3.</span> <span class="toc-text">3.单节点启动服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-查看Hadoop运行状态"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.查看Hadoop运行状态</span></a></li></ol></li></ol></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -602,15 +422,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CentOS6.7 hadoop3.2.1</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color2">hadoop3.2.1</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">

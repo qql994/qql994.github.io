@@ -6,25 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Maven配置教程 | 球球狸的老人博客</title>
+  <title>Hadoop-3.2.1体验 | 球球狸的老人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Maven配置教程Maven配置需要JDK，所以在下载前，请先安装好JDK。Maven的下载地址中也提到Maven3.3版本及以上需要JDK1.7版本以上的支持">
+  <meta name="description" content="一.新建文件夹&#x2F;export&#x2F;data1mkdir &#x2F;export&#x2F;data">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Maven配置教程">
-<meta property="og:url" content="http://yoursite.com/Maven%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:title" content="Hadoop-3.2.1体验">
+<meta property="og:url" content="http://yoursite.com/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/index.html">
 <meta property="og:site_name" content="球球狸的老人博客">
-<meta property="og:description" content="Maven配置教程Maven配置需要JDK，所以在下载前，请先安装好JDK。Maven的下载地址中也提到Maven3.3版本及以上需要JDK1.7版本以上的支持">
+<meta property="og:description" content="一.新建文件夹&#x2F;export&#x2F;data1mkdir &#x2F;export&#x2F;data">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/Maven%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/img/Maven%E4%B8%8B%E8%BD%BD.png">
-<meta property="og:image" content="http://yoursite.com/Maven%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/img/%E6%96%B0%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F.png">
-<meta property="og:image" content="http://yoursite.com/Maven%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/img/Path%E8%B7%AF%E5%BE%84%E9%85%8D%E7%BD%AE.png">
-<meta property="og:image" content="http://yoursite.com/Maven%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/img/%E9%85%8D%E7%BD%AE%E8%B7%AF%E5%BE%84.png">
-<meta property="article:published_time" content="2020-06-22T08:37:30.000Z">
-<meta property="article:modified_time" content="2020-06-22T08:50:48.225Z">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/img/word.txt%E4%B8%8A%E4%BC%A0%E5%88%B0HDFS.png">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/img/%E9%BB%98%E8%AE%A4nodemanager%E5%86%85%E5%AD%98%E4%B8%8D%E5%A4%9F.png">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/img/%E6%97%A0%E6%B3%95%E6%89%BE%E5%88%B0%E4%B8%BB%E7%B1%BBMRAppMaster.png">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/img/timezones.png">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/img/%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1%E6%88%90%E5%8A%9F1.png">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/img/%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1%E6%88%90%E5%8A%9F2.png">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/img/HDFS%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1.png">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/img/YARN%E6%88%90%E5%8A%9F%E6%93%8D%E4%BD%9C.png">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/img/%E4%B8%8B%E8%BD%BD%E7%9A%84%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1%E6%96%87%E4%BB%B6.png">
+<meta property="article:published_time" content="2020-07-06T04:37:56.000Z">
+<meta property="article:modified_time" content="2020-07-06T04:41:51.301Z">
 <meta property="article:author" content="球球狸">
-<meta property="article:tag" content="Maven">
+<meta property="article:tag" content="hadoop3.2.1">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/Maven%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/img/Maven%E4%B8%8B%E8%BD%BD.png">
+<meta name="twitter:image" content="http://yoursite.com/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/img/word.txt%E4%B8%8A%E4%BC%A0%E5%88%B0HDFS.png">
   
     <link rel="alternative" href="/atom.xml" title="球球狸的老人博客" type="application/atom+xml">
   
@@ -164,20 +169,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Maven配置教程" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Hadoop-3.2.1体验" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Maven配置教程
+      Hadoop-3.2.1体验
     </h1>
   
 
         
-        <a href="/Maven%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-06-22T08:37:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-22</time>
+        <a href="/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/" class="archive-article-date">
+  	<time datetime="2020-07-06T04:37:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
 </a>
         
       </header>
@@ -187,24 +192,64 @@
       
       <!---->
       
-        <h1 id="Maven配置教程"><a href="#Maven配置教程" class="headerlink" title="Maven配置教程"></a>Maven配置教程</h1><p><strong>Maven配置需要JDK，所以在下载前，请先安装好JDK。Maven的下载地址中也提到Maven3.3版本及以上需要JDK1.7版本以上的支持</strong></p>
+        <h2 id="一-新建文件夹-export-data"><a href="#一-新建文件夹-export-data" class="headerlink" title="一.新建文件夹/export/data"></a>一.新建文件夹/export/data</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /export/data</span><br></pre></td></tr></table></figure>
+
 <a id="more"></a>
 
-<h2 id="一-Maven下载"><a href="#一-Maven下载" class="headerlink" title="一.Maven下载"></a>一.Maven下载</h2><p>在Maven的官网即可下载，点击访问<a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">Apache Maven</a>。</p>
-<p><img src="img/Maven%E4%B8%8B%E8%BD%BD.png" alt="Maven下载"></p>
-<p>下载完解压即可。</p>
-<h2 id="二、环境变量配置"><a href="#二、环境变量配置" class="headerlink" title="二、环境变量配置"></a>二、环境变量配置</h2><h3 id="1-添加M-HOME：对应的MAVEN解压目录"><a href="#1-添加M-HOME：对应的MAVEN解压目录" class="headerlink" title="1.添加M_HOME：对应的MAVEN解压目录"></a>1.添加M_HOME：对应的MAVEN解压目录<img src="img/%E6%96%B0%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F.png" alt="新建系统变量"></h3><h3 id="2-修改系统变量中的Path"><a href="#2-修改系统变量中的Path" class="headerlink" title="2.修改系统变量中的Path"></a>2.修改系统变量中的Path</h3><p><img src="img/Path%E8%B7%AF%E5%BE%84%E9%85%8D%E7%BD%AE.png" alt="Path路径配置"></p>
-<p>在cmd中输入mvn -v可看到配置完毕的路径</p>
-<p><img src="img/%E9%85%8D%E7%BD%AE%E8%B7%AF%E5%BE%84.png" alt="配置路径"></p>
-<h2 id="三、修改配置文件settings"><a href="#三、修改配置文件settings" class="headerlink" title="三、修改配置文件settings"></a>三、修改配置文件settings</h2><p>我们修改的是目录下/conf/settings.xml文件</p>
-<h3 id="1-本地仓库位置修改（路径位置为本地自己设置的仓库位置）"><a href="#1-本地仓库位置修改（路径位置为本地自己设置的仓库位置）" class="headerlink" title="1.本地仓库位置修改（路径位置为本地自己设置的仓库位置）"></a>1.本地仓库位置修改（路径位置为本地自己设置的仓库位置）</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- localRepository</span></span><br><span class="line"><span class="comment">   | The path to the local repository maven will use to store artifacts.</span></span><br><span class="line"><span class="comment">   |</span></span><br><span class="line"><span class="comment">   | Default: $&#123;user.home&#125;/.m2/repository</span></span><br><span class="line"><span class="comment">  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</span></span><br><span class="line"><span class="comment">  --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>E:\Maven\apache-maven-3.6.3\repo<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="二-新建一个文件word-txt"><a href="#二-新建一个文件word-txt" class="headerlink" title="二.新建一个文件word.txt"></a>二.新建一个文件word.txt</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim word.txt</span><br></pre></td></tr></table></figure>
 
-<p>2.修改maven默认的jdk版本</p>
-<h3 id="在-lt-profiles-gt-标签下添加一个-lt-profile-gt-标签，修改maven默认的JDK版本"><a href="#在-lt-profiles-gt-标签下添加一个-lt-profile-gt-标签，修改maven默认的JDK版本" class="headerlink" title="在&lt;profiles&gt;标签下添加一个&lt;profile&gt;标签，修改maven默认的JDK版本"></a>在&lt;<strong>profiles</strong>&gt;标签下添加一个&lt;<strong>profile</strong>&gt;标签，修改maven默认的JDK版本</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">profile</span>&gt;</span>     </span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>JDK-1.8<span class="tag">&lt;/<span class="name">id</span>&gt;</span>       </span><br><span class="line">    <span class="tag">&lt;<span class="name">activation</span>&gt;</span>       </span><br><span class="line">        <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span>       </span><br><span class="line">        <span class="tag">&lt;<span class="name">jdk</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">jdk</span>&gt;</span>       </span><br><span class="line">    <span class="tag">&lt;/<span class="name">activation</span>&gt;</span>       </span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span>       </span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span>       </span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span>       </span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.compilerVersion</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.compilerVersion</span>&gt;</span>       </span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span>       </span><br><span class="line"><span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>随便输入些内容，在HDFS上创建/wordcount/input目录，将word上传到该目录下。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hdfs dfs -mkdir -p /wordcount/input</span><br><span class="line">hdfs dfs -put /export/data/word.txt /wordcount/input</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-添加国内镜像源"><a href="#3-添加国内镜像源" class="headerlink" title="3.添加国内镜像源"></a>3.添加国内镜像源</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 阿里云仓库 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/repositories/central/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 中央仓库1 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>repo1<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Human Readable Name for this Mirror.<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://repo1.maven.org/maven2/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 中央仓库2 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>repo2<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Human Readable Name for this Mirror.<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://repo2.maven.org/maven2/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>登录9870端口，点击Utilities下的Browse the file system,可以看见如下图：</p>
+<p><img src="img/word.txt%E4%B8%8A%E4%BC%A0%E5%88%B0HDFS.png" alt="word.txt上传到HDFS"></p>
+<p>hadoop删除文件夹命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop fs -rm -r -skipTrash /folder_name</span><br></pre></td></tr></table></figure>
 
-<p>到此就结束了全部的配置。</p>
+
+
+<h2 id="三-利用jar包进行单词统计"><a href="#三-利用jar包进行单词统计" class="headerlink" title="三.利用jar包进行单词统计"></a>三.利用jar包进行单词统计</h2><p>hadoop/mapreduce目录下有一个可以用于单词统计的jar包，具体路径为</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /export/servers/hadoop-3.2.1/share/hadoop/mapreduce</span><br></pre></td></tr></table></figure>
+
+<p>hadoop-mapreduce-examples-3.2.1.jar(一个包含了计算单词个数，计算Pi值功能的jar包)</p>
+<p>我们在jar包路径下执行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop jar hadoop-mapreduce-examples-3.2.1.jar wordcount /wordcount/input/word.txt /wordcount/output</span><br></pre></td></tr></table></figure>
+
+<p>出现错误：</p>
+<p><img src="img/%E9%BB%98%E8%AE%A4nodemanager%E5%86%85%E5%AD%98%E4%B8%8D%E5%A4%9F.png" alt="默认nodemanager内存不够"></p>
+<p>我们为NodeManager配置的内存仅有1024M，但是MapReduce作业所需的最小内存为1536M。</p>
+<p>所以我们修改yarn-site.xml文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /export/servers/hadoop-3.2.1/etc/hadoop</span><br><span class="line">vim yarn-site.xml</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.resource.memory-mb<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">value</span>&gt;</span>1536<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>修改完成后再次运行，会报一个’<strong>Could not find or load main class org.apache.hadoop.mapreduce.v2.app.MRAppMaster</strong>‘的错误</p>
+<p><img src="img/%E6%97%A0%E6%B3%95%E6%89%BE%E5%88%B0%E4%B8%BB%E7%B1%BBMRAppMaster.png" alt="无法找到主类MRAppMaster"></p>
+<p>解决这个问题，我们需要在所有节点上修改<strong>mapred-site.xml</strong>文件，添加以下内容：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim mapred-site.xml</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.app.mapreduce.am.env<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>HADOOP_MAPRED_HOME=$&#123;HADOOP_HOME&#125;<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.map.env<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>HADOOP_MAPRED_HOME=$&#123;HADOOP_HOME&#125;<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.reduce.env<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>HADOOP_MAPRED_HOME=$&#123;HADOOP_HOME&#125;<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>再次运行，报错’<strong>System times on machines may be out of sync. Check system time and time zone</strong>‘：</p>
+<p><img src="img/timezones.png" alt="timezones"></p>
+<p>时间不同步的问题，我们在三台虚拟机上都安装ntpdate工具</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install ntp ntpdate</span><br></pre></td></tr></table></figure>
+
+<p>设置虚拟机系统时间与网络同步</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ntpdate cn.pool.ntp.org</span><br></pre></td></tr></table></figure>
+
+<p>此时再运行，就不会出错。</p>
+<p><img src="img/%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1%E6%88%90%E5%8A%9F1.png" alt="单词统计成功1"></p>
+<p><img src="img/%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1%E6%88%90%E5%8A%9F2.png" alt="单词统计成功2"></p>
+<p>MapReduce程序执行结果</p>
+<p>HDFS界面：</p>
+<p><img src="img/HDFS%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1.png" alt="HDFS单词统计"></p>
+<p>YARN界面：</p>
+<p><img src="img/YARN%E6%88%90%E5%8A%9F%E6%93%8D%E4%BD%9C.png" alt="YARN成功操作"></p>
+<p>单击part-r-00000，点击下载。可以看到如下图所示：</p>
+<p><img src="img/%E4%B8%8B%E8%BD%BD%E7%9A%84%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1%E6%96%87%E4%BB%B6.png" alt="下载的单词统计文件"></p>
+<h2 id="四-总结"><a href="#四-总结" class="headerlink" title="四.总结"></a>四.总结</h2><p>1.需要访问jar包目录，才能运行jar包的功能。</p>
+<p>2.NodeManager的配置文件时yarn-site.xml。</p>
+<p>3.MapReduce作业所需的最小内存为1536M。</p>
 
       
 
@@ -218,7 +263,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop3.2.1</a>
         		</li>
       		
 		</ul>
@@ -230,7 +275,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Maven//" class="article-tag-list-link color1">Maven</a>
+        			<a href="/categories/虚拟机//" class="article-tag-list-link color4">虚拟机</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/虚拟机/Hadoop//" class="article-tag-list-link color2">Hadoop</a>
         		</li>
       		
 		</ul>
@@ -285,7 +334,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/Maven%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -299,18 +348,9 @@
   
 <nav id="article-nav">
   
-    <a href="/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          CentOS6.7搭建Hadoop-3.2.1
-        
-      </div>
-    </a>
   
-  
-    <a href="/IDEA%E8%BF%9E%E6%8E%A5Mysql%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%97%B6%E5%8C%BA%E9%94%99%E8%AF%AF%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">IDEA连接Mysql时出现的时区错误问题</div>
+    <a href="/assects/mdrepository/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CentOS6.7搭建Hadoop-3.2.1</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -337,7 +377,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Maven配置教程"><span class="toc-number">1.</span> <span class="toc-text">Maven配置教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-Maven下载"><span class="toc-number">1.1.</span> <span class="toc-text">一.Maven下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、环境变量配置"><span class="toc-number">1.2.</span> <span class="toc-text">二、环境变量配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-添加M-HOME：对应的MAVEN解压目录"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.添加M_HOME：对应的MAVEN解压目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-修改系统变量中的Path"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.修改系统变量中的Path</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、修改配置文件settings"><span class="toc-number">1.3.</span> <span class="toc-text">三、修改配置文件settings</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-本地仓库位置修改（路径位置为本地自己设置的仓库位置）"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.本地仓库位置修改（路径位置为本地自己设置的仓库位置）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在-lt-profiles-gt-标签下添加一个-lt-profile-gt-标签，修改maven默认的JDK版本"><span class="toc-number">1.3.2.</span> <span class="toc-text">在&lt;profiles&gt;标签下添加一个&lt;profile&gt;标签，修改maven默认的JDK版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-添加国内镜像源"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.添加国内镜像源</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-新建文件夹-export-data"><span class="toc-number">1.</span> <span class="toc-text">一.新建文件夹&#x2F;export&#x2F;data</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-新建一个文件word-txt"><span class="toc-number">2.</span> <span class="toc-text">二.新建一个文件word.txt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三-利用jar包进行单词统计"><span class="toc-number">3.</span> <span class="toc-text">三.利用jar包进行单词统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四-总结"><span class="toc-number">4.</span> <span class="toc-text">四.总结</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -436,15 +476,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CentOS6.7 hadoop3.2.1</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color2">hadoop3.2.1</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
