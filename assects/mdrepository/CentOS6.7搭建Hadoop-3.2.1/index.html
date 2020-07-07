@@ -37,7 +37,7 @@
 <meta property="og:image" content="http://yoursite.com/assects/mdrepository/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/HDFS%E7%9A%84UI.png">
 <meta property="og:image" content="http://yoursite.com/assects/mdrepository/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/img/YARN%E7%9A%84UI.png">
 <meta property="article:published_time" content="2020-07-05T16:24:56.000Z">
-<meta property="article:modified_time" content="2020-07-06T04:41:38.459Z">
+<meta property="article:modified_time" content="2020-07-06T05:56:56.681Z">
 <meta property="article:author" content="球球狸">
 <meta property="article:tag" content="hadoop3.2.1">
 <meta name="twitter:card" content="summary">
@@ -273,7 +273,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure>
 
 <p>在底部添加</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">配置环境变量</span></span><br><span class="line">export JAVA_HOME=/export/servers/jdk</span><br><span class="line"><span class="meta">#</span><span class="bash">配置环境变量</span></span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line"><span class="meta">#</span><span class="bash">配置环境变量</span></span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#配置环境变量</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/<span class="built_in">export</span>/servers/jdk</span><br><span class="line"><span class="comment">#配置环境变量</span></span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/jre/lib/rt.jar:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line"><span class="comment">#配置环境变量</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin</span><br></pre></td></tr></table></figure>
 
 <p>运行source /etc/profile使配置文件生效</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
@@ -289,7 +289,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure>
 
 <p>在底部添加</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export HADOOP_HOME=/export/servers/hadoop-3.2.1</span><br><span class="line">export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> HADOOP_HOME=/<span class="built_in">export</span>/servers/hadoop-3.2.1</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$HADOOP_HOME</span>/bin:<span class="variable">$HADOOP_HOME</span>/sbin</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
 
@@ -473,11 +473,11 @@
   
 <nav id="article-nav">
   
-    <a href="/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/assects/mdrepository/Hadoop%E4%BD%BF%E7%94%A8Shell%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E5%8A%9F%E8%83%BD/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Hadoop-3.2.1体验
+          Hadoop3.2.1使用Shell实现定时日志采集功能
         
       </div>
     </a>
@@ -618,11 +618,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RPG Maker MV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RPG Maker MV</a>
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
               </li>
             
             <div class="clearfix"></div>
