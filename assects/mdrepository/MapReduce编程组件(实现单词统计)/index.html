@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>MapReduce编程组件(实现单词统计) | 球球狸的老人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一.概念在Map阶段中，可能会输出大量相同的文件，因此我们通过Combine阶段来合并计算，然后再把新的键值对作为Reduce阶段的输入值。  注意：Combine本身并不会改变业务逻辑，因此即使没有Combine阶段，也不会导致最后输出结果的不同  MapReduce程序的运行模式有两种。 本地模式和集群运行模式 本地模式：在当前的开发环境下模拟MapReduce执行环境，处理的数据及输出结果在">
+  <meta name="description" content="一.概念在Map阶段中，可能会输出大量相同的文件，因此我们通过Combine阶段来合并计算，然后再把新的键值对作为Reduce阶段的输入值。  注意：Combine本身并不会改变业务逻辑，因此即使没有Combine阶段，也不会导致最后输出结果的不同">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MapReduce编程组件(实现单词统计)">
 <meta property="og:url" content="http://yoursite.com/assects/mdrepository/MapReduce%E7%BC%96%E7%A8%8B%E7%BB%84%E4%BB%B6(%E5%AE%9E%E7%8E%B0%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1)/index.html">
 <meta property="og:site_name" content="球球狸的老人博客">
-<meta property="og:description" content="一.概念在Map阶段中，可能会输出大量相同的文件，因此我们通过Combine阶段来合并计算，然后再把新的键值对作为Reduce阶段的输入值。  注意：Combine本身并不会改变业务逻辑，因此即使没有Combine阶段，也不会导致最后输出结果的不同  MapReduce程序的运行模式有两种。 本地模式和集群运行模式 本地模式：在当前的开发环境下模拟MapReduce执行环境，处理的数据及输出结果在">
+<meta property="og:description" content="一.概念在Map阶段中，可能会输出大量相同的文件，因此我们通过Combine阶段来合并计算，然后再把新的键值对作为Reduce阶段的输入值。  注意：Combine本身并不会改变业务逻辑，因此即使没有Combine阶段，也不会导致最后输出结果的不同">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/assects/mdrepository/MapReduce%E7%BC%96%E7%A8%8B%E7%BB%84%E4%BB%B6(%E5%AE%9E%E7%8E%B0%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1)/img/%E6%96%B0%E5%BB%BAwc%E7%9B%AE%E5%BD%95.png">
 <meta property="og:image" content="http://yoursite.com/assects/mdrepository/MapReduce%E7%BC%96%E7%A8%8B%E7%BB%84%E4%BB%B6(%E5%AE%9E%E7%8E%B0%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1)/img/%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E6%97%B6.png">
 <meta property="og:image" content="http://yoursite.com/assects/mdrepository/MapReduce%E7%BC%96%E7%A8%8B%E7%BB%84%E4%BB%B6(%E5%AE%9E%E7%8E%B0%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1)/img/%E7%A9%BA%E6%96%87%E4%BB%B6%E9%87%8C%E6%98%AF%E7%A9%BA%E7%9A%84.png">
 <meta property="og:image" content="http://yoursite.com/assects/mdrepository/MapReduce%E7%BC%96%E7%A8%8B%E7%BB%84%E4%BB%B6(%E5%AE%9E%E7%8E%B0%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1)/img/%E6%AD%A3%E7%A1%AE%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1.png">
 <meta property="article:published_time" content="2020-07-07T05:30:56.000Z">
-<meta property="article:modified_time" content="2020-07-08T02:52:42.710Z">
+<meta property="article:modified_time" content="2020-07-08T03:16:49.985Z">
 <meta property="article:author" content="球球狸">
 <meta property="article:tag" content="hadoop3.2.1">
 <meta property="article:tag" content="MapReduce">
@@ -192,6 +192,8 @@
 <blockquote>
 <p><strong>注意：Combine本身并不会改变业务逻辑，因此即使没有Combine阶段，也不会导致最后输出结果的不同</strong></p>
 </blockquote>
+<a id="more"></a>
+
 <p>MapReduce程序的运行模式有两种。</p>
 <p>本地模式和集群运行模式</p>
 <p><strong>本地模式</strong>：在当前的开发环境下模拟MapReduce执行环境，处理的数据及输出结果在本地操作系统</p>

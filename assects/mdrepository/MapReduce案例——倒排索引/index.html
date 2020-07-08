@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>MapReduce案例——倒排索引 | 球球狸的老人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一.设计思路假设有三个文件text1.txt&#x2F;text2.txt&#x2F;text3.txt 1.Map，首先使用TextInputFormat类对每个输入文件进行处理，得到文本中每行的偏移量和内容。Map整理键值对，得到需要的三个信息：单词、文档名称、词语出现频率。 2.Combine，将每个文档的词语出现频率进行统计 3.Reduce阶段，将所有文件中，key值相同的value值进行统计，并组合成需要">
+  <meta name="description" content="一.设计思路假设有三个文件text1.txt&#x2F;text2.txt&#x2F;text3.txt 1.Map，首先使用TextInputFormat类对每个输入文件进行处理，得到文本中每行的偏移量和内容。Map整理键值对，得到需要的三个信息：单词、文档名称、词语出现频率。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MapReduce案例——倒排索引">
 <meta property="og:url" content="http://yoursite.com/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/index.html">
 <meta property="og:site_name" content="球球狸的老人博客">
-<meta property="og:description" content="一.设计思路假设有三个文件text1.txt&#x2F;text2.txt&#x2F;text3.txt 1.Map，首先使用TextInputFormat类对每个输入文件进行处理，得到文本中每行的偏移量和内容。Map整理键值对，得到需要的三个信息：单词、文档名称、词语出现频率。 2.Combine，将每个文档的词语出现频率进行统计 3.Reduce阶段，将所有文件中，key值相同的value值进行统计，并组合成需要">
+<meta property="og:description" content="一.设计思路假设有三个文件text1.txt&#x2F;text2.txt&#x2F;text3.txt 1.Map，首先使用TextInputFormat类对每个输入文件进行处理，得到文本中每行的偏移量和内容。Map整理键值对，得到需要的三个信息：单词、文档名称、词语出现频率。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/img/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95.png">
 <meta property="article:published_time" content="2020-07-07T05:41:56.000Z">
-<meta property="article:modified_time" content="2020-07-07T06:49:52.743Z">
+<meta property="article:modified_time" content="2020-07-08T03:16:34.209Z">
 <meta property="article:author" content="球球狸">
 <meta property="article:tag" content="hadoop3.2.1">
 <meta property="article:tag" content="MapReduce">
@@ -187,6 +187,8 @@
       
         <h2 id="一-设计思路"><a href="#一-设计思路" class="headerlink" title="一.设计思路"></a>一.设计思路</h2><p>假设有三个文件<strong>text1.txt/text2.txt/text3.txt</strong></p>
 <p>1.Map，首先使用TextInputFormat类对每个输入文件进行处理，得到文本中每行的偏移量和内容。Map整理键值对，得到需要的三个信息：单词、文档名称、词语出现频率。</p>
+<a id="more"></a>
+
 <p>2.Combine，将每个文档的词语出现频率进行统计</p>
 <p>3.Reduce阶段，将所有文件中，key值相同的value值进行统计，并组合成需要的格式。</p>
 <h2 id="二-代码实现"><a href="#二-代码实现" class="headerlink" title="二.代码实现"></a>二.代码实现</h2><h3 id="1-Map阶段实现"><a href="#1-Map阶段实现" class="headerlink" title="1.Map阶段实现"></a>1.Map阶段实现</h3><p>InvertedIndexMapper.java</p>
