@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/img/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95.png">
 <meta property="article:published_time" content="2020-07-07T05:41:56.000Z">
-<meta property="article:modified_time" content="2020-07-08T01:42:54.196Z">
+<meta property="article:modified_time" content="2020-07-07T06:49:52.743Z">
 <meta property="article:author" content="球球狸">
 <meta property="article:tag" content="hadoop3.2.1">
 <meta property="article:tag" content="MapReduce">
@@ -189,8 +189,6 @@
 <p>1.Map，首先使用TextInputFormat类对每个输入文件进行处理，得到文本中每行的偏移量和内容。Map整理键值对，得到需要的三个信息：单词、文档名称、词语出现频率。</p>
 <p>2.Combine，将每个文档的词语出现频率进行统计</p>
 <p>3.Reduce阶段，将所有文件中，key值相同的value值进行统计，并组合成需要的格式。</p>
-<a id="more"></a>
-
 <h2 id="二-代码实现"><a href="#二-代码实现" class="headerlink" title="二.代码实现"></a>二.代码实现</h2><h3 id="1-Map阶段实现"><a href="#1-Map阶段实现" class="headerlink" title="1.Map阶段实现"></a>1.Map阶段实现</h3><p>InvertedIndexMapper.java</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InvertedIndexMapper</span> <span class="keyword">extends</span> <span class="title">Mapper</span>&lt;<span class="title">LongWritable</span>, <span class="title">Text</span>, <span class="title">Text</span>, <span class="title">Text</span>&gt; </span>&#123;</span><br><span class="line">    <span class="comment">//存储单词和文档名称</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Text keyInfo = <span class="keyword">new</span> Text();</span><br><span class="line">    <span class="comment">//存储词频，初始化为1</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Text valueInfo = <span class="keyword">new</span> Text(<span class="string">"1"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">map</span><span class="params">(LongWritable key, Text value, Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;</span><br><span class="line">        <span class="comment">//接收传进来的文本，将数值类型转为String型</span></span><br><span class="line">        String line = value.toString();</span><br><span class="line">        String[] fields= StringUtils.split(<span class="string">"line"</span>,<span class="string">" "</span>);</span><br><span class="line">        <span class="comment">//得到这行数据所在的文件切片</span></span><br><span class="line">        FileSplit fileSplit = (FileSplit) context.getInputSplit();</span><br><span class="line">        <span class="comment">//根据文件切片得到文件名</span></span><br><span class="line">        String fileName = fileSplit.getPath().getName();</span><br><span class="line">        <span class="keyword">for</span> (String field : fields)&#123;</span><br><span class="line">            keyInfo.set(field+<span class="string">":"</span>+fileName);</span><br><span class="line">            context.write(keyInfo,valueInfo);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -451,11 +449,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
