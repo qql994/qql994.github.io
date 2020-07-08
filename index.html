@@ -158,6 +158,499 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Zookeeper分布式集群部署" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assects/mdrepository/Zookeeper%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/">Zookeeper分布式集群部署</a>
+    </h1>
+  
+
+        
+        <a href="/assects/mdrepository/Zookeeper%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/" class="archive-article-date">
+  	<time datetime="2020-07-07T14:07:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h2 id="一-下载Zookeeper文件-解压"><a href="#一-下载Zookeeper文件-解压" class="headerlink" title="一.下载Zookeeper文件,解压"></a>一.下载Zookeeper文件,解压</h2><p>下载网址：<a href="https://www.apache.org/dyn/closer.lua/zookeeper/zookeeper-3.4.14/zookeeper-3.4.14.tar.gz" target="_blank" rel="noopener">Zookeeper-3.4.14</a></p>
+<p>Zookeeper集群的运行需要Java环境的支持，所以我们需要在虚拟机上提前安装jdk。</p>
+<p>到达<strong>/export/software</strong>目录下,使用<strong>wget</strong>命令下载zookeeper的压缩包，也可以选择在本机上下载完毕，再用上传rz命令上传至此目录。</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Zookeeper3.4.14</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SecureCRT</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IDEA//" class="article-tag-list-link color5">IDEA</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IDEA/Zookeeper//" class="article-tag-list-link color5">Zookeeper</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IDEA/Zookeeper/SSH服务器工具//" class="article-tag-list-link color4">SSH服务器工具</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assects/mdrepository/Zookeeper%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/">看看全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-MapReduce案例——数据去重" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%8E%BB%E9%87%8D/">MapReduce案例——数据去重</a>
+    </h1>
+  
+
+        
+        <a href="/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%8E%BB%E9%87%8D/" class="archive-article-date">
+  	<time datetime="2020-07-07T06:56:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><h3 id="DedupMapper-java"><a href="#DedupMapper-java" class="headerlink" title="DedupMapper.java"></a>DedupMapper.java</h3>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop3.2.1</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">MapReduce</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IDEA//" class="article-tag-list-link color5">IDEA</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IDEA/Hadoop//" class="article-tag-list-link color2">Hadoop</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%8E%BB%E9%87%8D/">看看全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-MapReduce案例——TopN" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94TopN/">MapReduce案例——TopN</a>
+    </h1>
+  
+
+        
+        <a href="/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94TopN/" class="archive-article-date">
+  	<time datetime="2020-07-07T06:56:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><h3 id="TopNMapper-java"><a href="#TopNMapper-java" class="headerlink" title="TopNMapper.java"></a>TopNMapper.java</h3>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop3.2.1</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">MapReduce</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IDEA//" class="article-tag-list-link color5">IDEA</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IDEA/Hadoop//" class="article-tag-list-link color2">Hadoop</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94TopN/">看看全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-MapReduce案例——倒排索引" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/">MapReduce案例——倒排索引</a>
+    </h1>
+  
+
+        
+        <a href="/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/" class="archive-article-date">
+  	<time datetime="2020-07-07T05:41:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h2 id="一-设计思路"><a href="#一-设计思路" class="headerlink" title="一.设计思路"></a>一.设计思路</h2><p>假设有三个文件<strong>text1.txt/text2.txt/text3.txt</strong></p>
+<p>1.Map，首先使用TextInputFormat类对每个输入文件进行处理，得到文本中每行的偏移量和内容。Map整理键值对，得到需要的三个信息：单词、文档名称、词语出现频率。</p>
+<p>2.Combine，将每个文档的词语出现频率进行统计</p>
+<p>3.Reduce阶段，将所有文件中，key值相同的value值进行统计，并组合成需要的格式。</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop3.2.1</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">MapReduce</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IDEA//" class="article-tag-list-link color5">IDEA</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IDEA/Hadoop//" class="article-tag-list-link color2">Hadoop</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/">看看全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-MapReduce编程组件(实现单词统计)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assects/mdrepository/MapReduce%E7%BC%96%E7%A8%8B%E7%BB%84%E4%BB%B6(%E5%AE%9E%E7%8E%B0%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1)/">MapReduce编程组件(实现单词统计)</a>
+    </h1>
+  
+
+        
+        <a href="/assects/mdrepository/MapReduce%E7%BC%96%E7%A8%8B%E7%BB%84%E4%BB%B6(%E5%AE%9E%E7%8E%B0%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1)/" class="archive-article-date">
+  	<time datetime="2020-07-07T05:30:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <p>InputFormat组件，这是一个Hadoop自带的组件。它的功能主要为数据切分，以及为Mapper提供输入数据</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop3.2.1</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">MapReduce</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IDEA//" class="article-tag-list-link color5">IDEA</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IDEA/Hadoop//" class="article-tag-list-link color2">Hadoop</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assects/mdrepository/MapReduce%E7%BC%96%E7%A8%8B%E7%BB%84%E4%BB%B6(%E5%AE%9E%E7%8E%B0%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1)/">看看全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-基于Hadoop3.2.1的HDFS-JAVA-API操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -640,386 +1133,10 @@
 
 
   
-    <article id="post-IDEA连接Mysql时出现的时区错误问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/assects/mdrepository/IDEA%E8%BF%9E%E6%8E%A5Mysql%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%97%B6%E5%8C%BA%E9%94%99%E8%AF%AF%E9%97%AE%E9%A2%98/">IDEA连接Mysql时出现的时区错误问题</a>
-    </h1>
-  
-
-        
-        <a href="/assects/mdrepository/IDEA%E8%BF%9E%E6%8E%A5Mysql%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%97%B6%E5%8C%BA%E9%94%99%E8%AF%AF%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-06-08T07:28:58.414Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <h2 id="1-错误提示警告"><a href="#1-错误提示警告" class="headerlink" title="1.错误提示警告"></a>1.错误提示警告</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Server returns invalid timezone. set &#39;serverTimezone&#39;提示我们出错的内容为时区错误。</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据库//" class="article-tag-list-link color4">数据库</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据库/mysql//" class="article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assects/mdrepository/IDEA%E8%BF%9E%E6%8E%A5Mysql%E6%97%B6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%97%B6%E5%8C%BA%E9%94%99%E8%AF%AF%E9%97%AE%E9%A2%98/">看看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-gift制作过程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assects/mdrepository/gift%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B/">gift制作过程</a>
-    </h1>
-  
-
-        
-        <a href="/assects/mdrepository/gift%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-06-04T03:06:52.854Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <p><strong>延续上一篇的简易制作。</strong></p>
-<p>设定上，gift 360天一年，一个月120天， 三个月为 惨 ， 雾， 尺</p>
-<p>魔族入侵人族，人族沦为殖民地。人类寻求精灵的帮助，霍尔德作为外交官出发进行旅程。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RPG Maker MV</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/RPG游戏制作//" class="article-tag-list-link color3">RPG游戏制作</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/RPG游戏制作/RPG-Maker-MV//" class="article-tag-list-link color3">RPG Maker MV</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assects/mdrepository/gift%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B/">看看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-RPG  MAKER  MV 游戏简易制作教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assects/mdrepository/RPG%20%20MAKER%20%20MV%20%E6%B8%B8%E6%88%8F%E7%AE%80%E6%98%93%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/">RPG  MAKER  MV 简易制作教程</a>
-    </h1>
-  
-
-        
-        <a href="/assects/mdrepository/RPG%20%20MAKER%20%20MV%20%E6%B8%B8%E6%88%8F%E7%AE%80%E6%98%93%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-05-29T10:16:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <h2 id="1-新建一个项目"><a href="#1-新建一个项目" class="headerlink" title="1.新建一个项目"></a>1.新建一个项目</h2><h3 id="1-1创建时的名字"><a href="#1-1创建时的名字" class="headerlink" title="1.1创建时的名字"></a>1.1创建时的名字</h3><p>文件夹名：就是文件夹的名字。</p>
-<p>游戏标题会出现在游戏最开始的画面上。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RPG Maker MV</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/RPG游戏制作//" class="article-tag-list-link color3">RPG游戏制作</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/RPG游戏制作/RPG-Maker-MV//" class="article-tag-list-link color3">RPG Maker MV</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assects/mdrepository/RPG%20%20MAKER%20%20MV%20%E6%B8%B8%E6%88%8F%E7%AE%80%E6%98%93%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/">看看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-RPG MAKER MV的安装（超简易）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assects/mdrepository/RPG%20MAKER%20MV%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E8%B6%85%E7%AE%80%E6%98%93%EF%BC%89/">RPG MAKER MV的安装（超简易）</a>
-    </h1>
-  
-
-        
-        <a href="/assects/mdrepository/RPG%20MAKER%20MV%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E8%B6%85%E7%AE%80%E6%98%93%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-29T08:16:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <p>前言：既然是来找安装资源的，就不要说什么盗版正版了。有钱请自觉支持正版！</p>
-<p>1.下载底下网盘链接的资源</p>
-<p>2.解压缩文件，随便放在哪个目录下都可以</p>
-<p>3.运行解压后文件夹下的f4-rpgmv161-setup.exe文件（资源来源于3dm）</p>
-<p>3dm资源链接：<a href="https://dl.3dmgame.com/patch/144140.html" target="_blank" rel="noopener">https://dl.3dmgame.com/patch/144140.html</a></p>
-<p>转存后网盘链接：<a href="https://pan.baidu.com/s/1dFbCKGCxPK3TzD-_Fz9iYQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1dFbCKGCxPK3TzD-_Fz9iYQ</a><br>提取码：rzu1</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RPG Maker MV</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/资源//" class="article-tag-list-link color3">资源</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/资源/RPG游戏制作//" class="article-tag-list-link color3">RPG游戏制作</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/资源/RPG游戏制作/RPG-Maker-MV//" class="article-tag-list-link color3">RPG Maker MV</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assects/mdrepository/RPG%20MAKER%20MV%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E8%B6%85%E7%AE%80%E6%98%93%EF%BC%89/">看看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
@@ -1104,11 +1221,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">shell</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color5">MapReduce</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1117,6 +1238,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">RPG Maker MV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Zookeeper3.4.14</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SecureCRT</a>
               </li>
              
               <li class="article-tag-list-item">
