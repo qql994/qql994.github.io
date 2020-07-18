@@ -158,6 +158,103 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-IDEA插件lombok" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assects/mdrepository/IDEA%E6%8F%92%E4%BB%B6lombok/">IDEA插件lombok</a>
+    </h1>
+  
+
+        
+        <a href="/assects/mdrepository/IDEA%E6%8F%92%E4%BB%B6lombok/" class="archive-article-date">
+  	<time datetime="2020-07-18T09:11:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <p>lombok是一款可以免写get和set方法的插件，避免实体类变得臃肿繁杂。</p>
+<p>使用方法非常简单，在pom.xml配置文件中添加依赖包</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.18.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>点击File -&gt; settings -&gt;Plugins -&gt;Marketplace中搜索lombok然后安装，重启idea即可。</p>
+<p>使用时需要在实体类上导入此包，在类上注解@Data，例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//导入</span></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="comment">//注解</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String user;</span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        User user = <span class="keyword">new</span> User();</span><br><span class="line">        user.setUser(<span class="string">"小小"</span>);</span><br><span class="line">        user.setId(<span class="string">"1"</span>);</span><br><span class="line">        user.setPassword(<span class="string">"651655"</span>);</span><br><span class="line">        System.out.println(<span class="string">"id:"</span>+user.getId());</span><br><span class="line">        System.out.println(<span class="string">"user:"</span>+user.getUser());</span><br><span class="line">        System.out.println(<span class="string">"password:"</span>+user.getPassword());</span><br><span class="line">        System.out.println(<span class="string">"password:"</span>+user.toString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<p><img src="img/1.png" alt="1"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">plugins</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IDEA//" class="article-tag-list-link color5">IDEA</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assects/mdrepository/IDEA%E6%8F%92%E4%BB%B6lombok/">看看全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-尚硅谷SSM_CRUD学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -864,107 +961,6 @@
 
 
   
-    <article id="post-Hadoop3.2.1使用Shell实现定时日志采集功能" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assects/mdrepository/Hadoop3.2.1%E4%BD%BF%E7%94%A8Shell%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E5%8A%9F%E8%83%BD/">Hadoop3.2.1使用Shell实现定时日志采集功能</a>
-    </h1>
-  
-
-        
-        <a href="/assects/mdrepository/Hadoop3.2.1%E4%BD%BF%E7%94%A8Shell%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E5%8A%9F%E8%83%BD/" class="archive-article-date">
-  	<time datetime="2020-07-06T04:37:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <h2 id="1-配置环境变量"><a href="#1-配置环境变量" class="headerlink" title="1.配置环境变量"></a>1.配置环境变量</h2><p>在/export/data/logs目录下创建一个upload2HDFS.sh脚本文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /export/data/logs</span><br><span class="line">cd /export/data/logs</span><br><span class="line">vim upload2HDFS.sh</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop3.2.1</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/虚拟机//" class="article-tag-list-link color4">虚拟机</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/虚拟机/Hadoop//" class="article-tag-list-link color2">Hadoop</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/虚拟机/Hadoop/脚本//" class="article-tag-list-link color3">脚本</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assects/mdrepository/Hadoop3.2.1%E4%BD%BF%E7%94%A8Shell%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E5%8A%9F%E8%83%BD/">看看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-Hadoop-3.2.1体验" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1057,20 +1053,20 @@
 
 
   
-    <article id="post-CentOS6.7搭建Hadoop-3.2.1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Hadoop3.2.1使用Shell实现定时日志采集功能" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/assects/mdrepository/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/">CentOS6.7搭建Hadoop-3.2.1</a>
+      <a class="article-title" href="/assects/mdrepository/Hadoop3.2.1%E4%BD%BF%E7%94%A8Shell%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E5%8A%9F%E8%83%BD/">Hadoop3.2.1使用Shell实现定时日志采集功能</a>
     </h1>
   
 
         
-        <a href="/assects/mdrepository/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/" class="archive-article-date">
-  	<time datetime="2020-07-05T16:24:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
+        <a href="/assects/mdrepository/Hadoop3.2.1%E4%BD%BF%E7%94%A8Shell%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E5%8A%9F%E8%83%BD/" class="archive-article-date">
+  	<time datetime="2020-07-06T04:37:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
 </a>
         
       </header>
@@ -1080,7 +1076,8 @@
       
       <!---->
       
-        <h2 id="一-Hadoop集群"><a href="#一-Hadoop集群" class="headerlink" title="一.Hadoop集群"></a>一.Hadoop集群</h2><h3 id="1-克隆原先的CentOS"><a href="#1-克隆原先的CentOS" class="headerlink" title="1.克隆原先的CentOS"></a>1.克隆原先的CentOS</h3>
+        <h2 id="1-配置环境变量"><a href="#1-配置环境变量" class="headerlink" title="1.配置环境变量"></a>1.配置环境变量</h2><p>在/export/data/logs目录下创建一个upload2HDFS.sh脚本文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /export/data/logs</span><br><span class="line">cd /export/data/logs</span><br><span class="line">vim upload2HDFS.sh</span><br></pre></td></tr></table></figure>
         
       
 
@@ -1095,6 +1092,10 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop3.2.1</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
         		</li>
       		
 		</ul>
@@ -1112,6 +1113,10 @@
         		<li class="article-tag-list-item">
         			<a href="/categories/虚拟机/Hadoop//" class="article-tag-list-link color2">Hadoop</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/虚拟机/Hadoop/脚本//" class="article-tag-list-link color3">脚本</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -1119,7 +1124,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/assects/mdrepository/CentOS6.7%E6%90%AD%E5%BB%BAHadoop-3.2.1/">看看全文 >></a>
+          <a class="article-more-a" href="/assects/mdrepository/Hadoop3.2.1%E4%BD%BF%E7%94%A8Shell%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E5%8A%9F%E8%83%BD/">看看全文 >></a>
         </p>
       
 
@@ -1241,11 +1246,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color3">plugins</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">MapReduce</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
