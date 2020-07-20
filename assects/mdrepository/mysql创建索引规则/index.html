@@ -6,23 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>MapReduce案例——倒排索引 | 球球狸的老人博客</title>
+  <title>mysql创建组合索引规则 | 球球狸的老人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一.设计思路假设有三个文件text1.txt&#x2F;text2.txt&#x2F;text3.txt 1.Map，首先使用TextInputFormat类对每个输入文件进行处理，得到文本中每行的偏移量和内容。Map整理键值对，得到需要的三个信息：单词、文档名称、词语出现频率。">
+  <meta name="description" content="普通索引创建普通索引： 123CREATE INDEX 索引名 ON 表名(列名X);例如：CREATE INDEX lisk ON a(id);">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MapReduce案例——倒排索引">
-<meta property="og:url" content="http://yoursite.com/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/index.html">
+<meta property="og:title" content="mysql创建组合索引规则">
+<meta property="og:url" content="http://yoursite.com/assects/mdrepository/mysql%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95%E8%A7%84%E5%88%99/index.html">
 <meta property="og:site_name" content="球球狸的老人博客">
-<meta property="og:description" content="一.设计思路假设有三个文件text1.txt&#x2F;text2.txt&#x2F;text3.txt 1.Map，首先使用TextInputFormat类对每个输入文件进行处理，得到文本中每行的偏移量和内容。Map整理键值对，得到需要的三个信息：单词、文档名称、词语出现频率。">
+<meta property="og:description" content="普通索引创建普通索引： 123CREATE INDEX 索引名 ON 表名(列名X);例如：CREATE INDEX lisk ON a(id);">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/img/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95.png">
-<meta property="article:published_time" content="2020-07-07T05:41:56.000Z">
-<meta property="article:modified_time" content="2020-07-08T03:16:34.209Z">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/mysql%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95%E8%A7%84%E5%88%99/img/%E5%88%9B%E5%BB%BA%E6%99%AE%E9%80%9A%E7%B4%A2%E5%BC%95.png">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/mysql%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95%E8%A7%84%E5%88%99/img/%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95.png">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/mysql%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95%E8%A7%84%E5%88%99/img/%E5%88%9B%E5%BB%BA%E7%BB%84%E5%90%88%E7%B4%A2%E5%BC%95.png">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/mysql%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95%E8%A7%84%E5%88%99/img/%E5%88%A0%E9%99%A4%E7%B4%A2%E5%BC%95.png">
+<meta property="article:published_time" content="2020-07-20T09:23:33.000Z">
+<meta property="article:modified_time" content="2020-07-20T09:23:59.596Z">
 <meta property="article:author" content="球球狸">
-<meta property="article:tag" content="hadoop3.2.1">
-<meta property="article:tag" content="MapReduce">
+<meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/img/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95.png">
+<meta name="twitter:image" content="http://yoursite.com/assects/mdrepository/mysql%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95%E8%A7%84%E5%88%99/img/%E5%88%9B%E5%BB%BA%E6%99%AE%E9%80%9A%E7%B4%A2%E5%BC%95.png">
   
     <link rel="alternative" href="/atom.xml" title="球球狸的老人博客" type="application/atom+xml">
   
@@ -162,20 +164,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MapReduce案例——倒排索引" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-mysql创建索引规则" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MapReduce案例——倒排索引
+      mysql创建组合索引规则
     </h1>
   
 
         
-        <a href="/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/" class="archive-article-date">
-  	<time datetime="2020-07-07T05:41:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-07</time>
+        <a href="/assects/mdrepository/mysql%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95%E8%A7%84%E5%88%99/" class="archive-article-date">
+  	<time datetime="2020-07-20T09:23:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-20</time>
 </a>
         
       </header>
@@ -185,29 +187,26 @@
       
       <!---->
       
-        <h2 id="一-设计思路"><a href="#一-设计思路" class="headerlink" title="一.设计思路"></a>一.设计思路</h2><p>假设有三个文件<strong>text1.txt/text2.txt/text3.txt</strong></p>
-<p>1.Map，首先使用TextInputFormat类对每个输入文件进行处理，得到文本中每行的偏移量和内容。Map整理键值对，得到需要的三个信息：单词、文档名称、词语出现频率。</p>
+        <h2 id="普通索引"><a href="#普通索引" class="headerlink" title="普通索引"></a>普通索引</h2><p>创建普通索引：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CREATE INDEX 索引名 ON 表名(列名X);</span><br><span class="line">例如：</span><br><span class="line">CREATE INDEX lisk ON a(id);</span><br></pre></td></tr></table></figure>
+
+<p><img src="img/%E5%88%9B%E5%BB%BA%E6%99%AE%E9%80%9A%E7%B4%A2%E5%BC%95.png" alt="创建普通索引"></p>
 <a id="more"></a>
 
-<p>2.Combine，将每个文档的词语出现频率进行统计</p>
-<p>3.Reduce阶段，将所有文件中，key值相同的value值进行统计，并组合成需要的格式。</p>
-<h2 id="二-代码实现"><a href="#二-代码实现" class="headerlink" title="二.代码实现"></a>二.代码实现</h2><h3 id="1-Map阶段实现"><a href="#1-Map阶段实现" class="headerlink" title="1.Map阶段实现"></a>1.Map阶段实现</h3><p>InvertedIndexMapper.java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InvertedIndexMapper</span> <span class="keyword">extends</span> <span class="title">Mapper</span>&lt;<span class="title">LongWritable</span>, <span class="title">Text</span>, <span class="title">Text</span>, <span class="title">Text</span>&gt; </span>&#123;</span><br><span class="line">    <span class="comment">//存储单词和文档名称</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Text keyInfo = <span class="keyword">new</span> Text();</span><br><span class="line">    <span class="comment">//存储词频，初始化为1</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Text valueInfo = <span class="keyword">new</span> Text(<span class="string">"1"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">map</span><span class="params">(LongWritable key, Text value, Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;</span><br><span class="line">        <span class="comment">//接收传进来的文本，将数值类型转为String型</span></span><br><span class="line">        String line = value.toString();</span><br><span class="line">        String[] fields= StringUtils.split(<span class="string">"line"</span>,<span class="string">" "</span>);</span><br><span class="line">        <span class="comment">//得到这行数据所在的文件切片</span></span><br><span class="line">        FileSplit fileSplit = (FileSplit) context.getInputSplit();</span><br><span class="line">        <span class="comment">//根据文件切片得到文件名</span></span><br><span class="line">        String fileName = fileSplit.getPath().getName();</span><br><span class="line">        <span class="keyword">for</span> (String field : fields)&#123;</span><br><span class="line">            keyInfo.set(field+<span class="string">":"</span>+fileName);</span><br><span class="line">            context.write(keyInfo,valueInfo);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="唯一索引"><a href="#唯一索引" class="headerlink" title="唯一索引"></a>唯一索引</h2><p>创建唯一索引：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CREATE UNIQUE INDEX 索引名 ON 表名(列名X);</span><br><span class="line">例如：</span><br><span class="line">CREATE UNIQUE INDEX lisk ON a(id);</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-Combine阶段实现"><a href="#2-Combine阶段实现" class="headerlink" title="2.Combine阶段实现"></a>2.Combine阶段实现</h3><p>InvertedIndexCombiner.java</p>
-<p>对Map阶段的单词次数聚合处理，并把key值重新设置为单词，value值由文档名称和词频组成</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InvertedIndexCombiner</span> <span class="keyword">extends</span> <span class="title">Reducer</span>&lt;<span class="title">Text</span>, <span class="title">Text</span>, <span class="title">Text</span>, <span class="title">Text</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Text info = <span class="keyword">new</span> Text();</span><br><span class="line">    <span class="comment">//输入：&lt;MapReduce:text1.txt &#123;1,1,...&#125;&gt;</span></span><br><span class="line">    <span class="comment">//输入：&lt;MapReduce text1.txt:2&gt;</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">reduce</span><span class="params">(Text key, Iterable&lt;Text&gt; values, Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;</span><br><span class="line">        <span class="comment">//统计词频</span></span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (Text value : values)&#123;</span><br><span class="line">            sum += Integer.parseInt(value.toString());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> splitIndex = key.toString().indexOf(<span class="string">":"</span>);</span><br><span class="line">        <span class="comment">//重新设置value值由文档名称和词频组成</span></span><br><span class="line">        info.set(key.toString().substring(splitIndex+<span class="number">1</span>)+<span class="string">":"</span>+sum);</span><br><span class="line">        <span class="comment">//重新设置key值为单词</span></span><br><span class="line">        key.set(key.toString().substring(<span class="number">0</span>,splitIndex));</span><br><span class="line">        context.write(key,info);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="img/%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95.png" alt="唯一索引"></p>
+<h2 id="组合索引"><a href="#组合索引" class="headerlink" title="组合索引"></a>组合索引</h2><p>创建组合索引：</p>
+<p>在同一张表上的多个列中建立一个复杂索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CREATE INDEX 索引名 ON 表名(列名X, 列名Y, 列名Z);</span><br><span class="line">例如：</span><br><span class="line">CREATE INDEX lisk ON a(id, Aname, type);</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-Reduce阶段实现"><a href="#3-Reduce阶段实现" class="headerlink" title="3.Reduce阶段实现"></a>3.Reduce阶段实现</h3><p>InvertedIndexReducer.java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InvertedIndexReducer</span> <span class="keyword">extends</span> <span class="title">Reducer</span>&lt;<span class="title">Text</span>, <span class="title">Text</span>, <span class="title">Text</span>, <span class="title">Text</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span>  <span class="keyword">static</span> Text result = <span class="keyword">new</span> Text();</span><br><span class="line">    <span class="comment">//输入:&lt;MapReduce text3.txt:2&gt;</span></span><br><span class="line">    <span class="comment">//输出:&lt;MapReduce text1.txt:1;text2.txt:1;text3.txt:2&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">reduce</span><span class="params">(Text key, Iterable&lt;Text&gt; values, Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;</span><br><span class="line">        <span class="comment">//生成文档列表</span></span><br><span class="line">        String fileList = <span class="keyword">new</span> String();</span><br><span class="line">        <span class="keyword">for</span>(Text value : values)&#123;</span><br><span class="line">            fileList += value.toString()+<span class="string">";"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        result.set(fileList);</span><br><span class="line">        context.write(key,result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样就相当于是建立了三个索引，分别是单列索引（id），复合索引（id，Aname），复合索引（id，Aname，type）。</p>
+<p>为什么没有 id，type这样的组合索引呢？这是因为MySQL组合索引“最左前缀”的结果。简单的理解就是只从最左面的开始组合。</p>
+<p><img src="img/%E5%88%9B%E5%BB%BA%E7%BB%84%E5%90%88%E7%B4%A2%E5%BC%95.png" alt="创建组合索引"></p>
+<h2 id="删除索引"><a href="#删除索引" class="headerlink" title="删除索引"></a>删除索引</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DROP INDEX 索引名 ON 表名;</span><br><span class="line">例如：</span><br><span class="line">DROP INDEX lisk ON a;</span><br></pre></td></tr></table></figure>
 
-
-
-<h3 id="4-Driver程序主类实现"><a href="#4-Driver程序主类实现" class="headerlink" title="4.Driver程序主类实现"></a>4.Driver程序主类实现</h3><p>InvertedIndexDriver.java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InvertedIndexDriver</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException, InterruptedException</span>&#123;</span><br><span class="line">        <span class="comment">//通过Job来封装本次的MR信息</span></span><br><span class="line">        Configuration configuration = <span class="keyword">new</span> Configuration();</span><br><span class="line">        Job ivijob = Job.getInstance(configuration);</span><br><span class="line">        <span class="comment">//指定MR Job jar包运行主类</span></span><br><span class="line">        ivijob.setJarByClass(InvertedIndexDriver<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        <span class="comment">//指定本次MR所有的Mapper Reducer类</span></span><br><span class="line">        ivijob.setMapperClass(InvertedIndexMapper<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        ivijob.setReducerClass(InvertedIndexReducer<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        <span class="comment">//设置业务逻辑Reducer类的输出key和value的数据类型</span></span><br><span class="line">        ivijob.setOutputKeyClass(Text<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        ivijob.setOutputValueClass(Text<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        <span class="comment">//使用本地模式指定要处理的数据所在的位置</span></span><br><span class="line">        FileInputFormat.setInputPaths(ivijob,<span class="string">"E:\\Hadoop\\IvI\\input"</span>);</span><br><span class="line">        <span class="comment">//使用本地模式指定处理完成之后的结果存放位置</span></span><br><span class="line">        FileOutputFormat.setOutputPath(ivijob,<span class="keyword">new</span> Path(<span class="string">"E:\\Hadoop\\IvI\\output"</span>));</span><br><span class="line">        <span class="comment">//提交程序并且监控打印程序执行情况</span></span><br><span class="line">        <span class="keyword">boolean</span> res = ivijob.waitForCompletion(<span class="keyword">true</span>);</span><br><span class="line">        System.exit(res ? <span class="number">0</span> : <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行主程序，可以得到</p>
-<p><img src="img/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95.png" alt="倒排索引"></p>
+<p><img src="img/%E5%88%A0%E9%99%A4%E7%B4%A2%E5%BC%95.png" alt="删除索引"></p>
 
       
 
@@ -221,11 +220,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop3.2.1</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">MapReduce</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
         		</li>
       		
 		</ul>
@@ -237,11 +232,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/IDEA//" class="article-tag-list-link color5">IDEA</a>
+        			<a href="/categories/数据库//" class="article-tag-list-link color4">数据库</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/IDEA/Hadoop//" class="article-tag-list-link color2">Hadoop</a>
+        			<a href="/categories/数据库/mysql//" class="article-tag-list-link color1">mysql</a>
         		</li>
       		
 		</ul>
@@ -296,7 +291,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/assects/mdrepository/mysql%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95%E8%A7%84%E5%88%99/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -310,18 +305,9 @@
   
 <nav id="article-nav">
   
-    <a href="/assects/mdrepository/MapReduce%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%8E%BB%E9%87%8D/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          MapReduce案例——数据去重
-        
-      </div>
-    </a>
   
-  
-    <a href="/assects/mdrepository/MapReduce%E7%BC%96%E7%A8%8B%E7%BB%84%E4%BB%B6(%E5%AE%9E%E7%8E%B0%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MapReduce编程组件(实现单词统计)</div>
+    <a href="/assects/mdrepository/IDEA%E6%8F%92%E4%BB%B6lombok/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">IDEA插件lombok</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -348,7 +334,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-设计思路"><span class="toc-number">1.</span> <span class="toc-text">一.设计思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-代码实现"><span class="toc-number">2.</span> <span class="toc-text">二.代码实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Map阶段实现"><span class="toc-number">2.1.</span> <span class="toc-text">1.Map阶段实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Combine阶段实现"><span class="toc-number">2.2.</span> <span class="toc-text">2.Combine阶段实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Reduce阶段实现"><span class="toc-number">2.3.</span> <span class="toc-text">3.Reduce阶段实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Driver程序主类实现"><span class="toc-number">2.4.</span> <span class="toc-text">4.Driver程序主类实现</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#普通索引"><span class="toc-number">1.</span> <span class="toc-text">普通索引</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#唯一索引"><span class="toc-number">2.</span> <span class="toc-text">唯一索引</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组合索引"><span class="toc-number">3.</span> <span class="toc-text">组合索引</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除索引"><span class="toc-number">4.</span> <span class="toc-text">删除索引</span></a></li></ol>
                     </div>
                 </span>
             </div>
