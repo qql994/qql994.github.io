@@ -158,6 +158,95 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-java序列化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assects/mdrepository/java%E5%BA%8F%E5%88%97%E5%8C%96/">Java序列化</a>
+    </h1>
+  
+
+        
+        <a href="/assects/mdrepository/java%E5%BA%8F%E5%88%97%E5%8C%96/" class="archive-article-date">
+  	<time datetime="2020-07-21T01:56:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h2 id="什么是序列化？"><a href="#什么是序列化？" class="headerlink" title="什么是序列化？"></a>什么是序列化？</h2><h3 id="简单解释："><a href="#简单解释：" class="headerlink" title="简单解释："></a>简单解释：</h3><p>序列化就是一种用来处理对象流的机制，所谓对象流也就是将对象的内容进行流化。可以对流化后的对象进行读写操作，也可将流化后的对象传输于网络之间。<br>　　序列化是为了解决在对对象流进行读写操作时所引发的问题。序列化的实现：将需要被序列化的类实现Serializable接口，该接口没有需要实现的方法，<code>implements Serializable</code>只是为了标注该对象是可被序列化的，<br>然后使用一个输出流(如：<code>FileOutputStream</code>)来构造一个<code>ObjectOutputStream</code>(对象流)对象，接着，使用ObjectOutputStream对象的<code>writeObject(Object obj)</code>方法就可以将参数为obj的对象写出(即保存其状态)，要恢复的话则用输入流。</p>
+<p>如果需要反序列化,则可以用一个输入流<code>FileInputStream</code>建立对象输入流,然后通过<code>readObeject</code>方法从流中读取对象</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JAVA//" class="article-tag-list-link color5">JAVA</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assects/mdrepository/java%E5%BA%8F%E5%88%97%E5%8C%96/">看看全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-mysql创建索引规则" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1056,98 +1145,6 @@
 
 
   
-    <article id="post-Hadoop-3.2.1体验" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/">Hadoop-3.2.1体验</a>
-    </h1>
-  
-
-        
-        <a href="/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/" class="archive-article-date">
-  	<time datetime="2020-07-06T04:37:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <h2 id="一-新建文件夹-export-data"><a href="#一-新建文件夹-export-data" class="headerlink" title="一.新建文件夹/export/data"></a>一.新建文件夹/export/data</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /export/data</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop3.2.1</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/虚拟机//" class="article-tag-list-link color4">虚拟机</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/虚拟机/Hadoop//" class="article-tag-list-link color2">Hadoop</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assects/mdrepository/Hadoop-3.2.1%E4%BD%93%E9%AA%8C/">看看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &gt;&gt;</a>
@@ -1244,19 +1241,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">MapReduce</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RPG Maker MV</a>
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RPG Maker MV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1265,6 +1262,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">SecureCRT</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
