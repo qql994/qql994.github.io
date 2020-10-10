@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Hive数据仓库 | 球球狸的老人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.Hive的安装1.1Hive安装模式Hive的安装模式分为三种，分别是嵌入模式，本地模式和远程模式 1.1.1嵌入模式使用内嵌的Derby数据库存储元数据，是Hive的默认安装方式，配置简单，但是一次只能连接一个客户端，适合用来测试，不适合生产环境。 在Apache镜像网站下载Linux下的Hive安装包 1.1.1.1版本为Hive-1.2.1(Hadoop2.7.4使用)123456789">
+  <meta name="description" content="1.Hive的安装1.1Hive安装模式Hive的安装模式分为三种，分别是嵌入模式，本地模式和远程模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hive数据仓库">
 <meta property="og:url" content="http://yoursite.com/assects/mdrepository/Hive%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/index.html">
 <meta property="og:site_name" content="球球狸的老人博客">
-<meta property="og:description" content="1.Hive的安装1.1Hive安装模式Hive的安装模式分为三种，分别是嵌入模式，本地模式和远程模式 1.1.1嵌入模式使用内嵌的Derby数据库存储元数据，是Hive的默认安装方式，配置简单，但是一次只能连接一个客户端，适合用来测试，不适合生产环境。 在Apache镜像网站下载Linux下的Hive安装包 1.1.1.1版本为Hive-1.2.1(Hadoop2.7.4使用)123456789">
+<meta property="og:description" content="1.Hive的安装1.1Hive安装模式Hive的安装模式分为三种，分别是嵌入模式，本地模式和远程模式">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="f:%5Cmd%E6%96%87%E6%A1%A3%E5%88%B6%E4%BD%9C%5CCentOS%5CHadoop%5CHive%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%5Cimg%5Chive%E5%91%BD%E4%BB%A4.png">
 <meta property="og:image" content="f:%5Cmd%E6%96%87%E6%A1%A3%E5%88%B6%E4%BD%9C%5CCentOS%5CHadoop%5CHive%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%5Cimg%5Crunjar.png">
@@ -21,7 +21,7 @@
 <meta property="og:image" content="f:%5Cmd%E6%96%87%E6%A1%A3%E5%88%B6%E4%BD%9C%5CCentOS%5CHadoop%5CHive%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%5Cimg%5Ct_user.png">
 <meta property="og:image" content="f:%5Cmd%E6%96%87%E6%A1%A3%E5%88%B6%E4%BD%9C%5CCentOS%5CHadoop%5CHive%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%5Cimg%5C%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C.png">
 <meta property="article:published_time" content="2020-10-01T01:16:56.000Z">
-<meta property="article:modified_time" content="2020-10-05T01:53:14.349Z">
+<meta property="article:modified_time" content="2020-10-10T02:15:44.022Z">
 <meta property="article:author" content="球球狸">
 <meta property="article:tag" content="hive">
 <meta name="twitter:card" content="summary">
@@ -194,6 +194,8 @@
       <!---->
       
         <h2 id="1-Hive的安装"><a href="#1-Hive的安装" class="headerlink" title="1.Hive的安装"></a>1.Hive的安装</h2><h3 id="1-1Hive安装模式"><a href="#1-1Hive安装模式" class="headerlink" title="1.1Hive安装模式"></a>1.1Hive安装模式</h3><p>Hive的安装模式分为三种，分别是嵌入模式，本地模式和远程模式</p>
+<a id="more"></a>
+
 <h4 id="1-1-1嵌入模式"><a href="#1-1-1嵌入模式" class="headerlink" title="1.1.1嵌入模式"></a>1.1.1嵌入模式</h4><p>使用内嵌的Derby数据库存储元数据，是Hive的默认安装方式，配置简单，但是一次只能连接一个客户端，适合用来测试，不适合生产环境。</p>
 <p>在Apache镜像网站下载Linux下的Hive安装包</p>
 <h5 id="1-1-1-1版本为Hive-1-2-1-Hadoop2-7-4使用"><a href="#1-1-1-1版本为Hive-1-2-1-Hadoop2-7-4使用" class="headerlink" title="1.1.1.1版本为Hive-1.2.1(Hadoop2.7.4使用)"></a>1.1.1.1版本为Hive-1.2.1(Hadoop2.7.4使用)</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">直接在linux上下载</span></span><br><span class="line">cd /export/software</span><br><span class="line"></span><br><span class="line">wget http://archive.apache.org/dist/hive/hive-1.2.1/apache-hive-1.2.1-bin.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">################</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">在本地下载完毕后上传</span></span><br><span class="line"></span><br><span class="line">cd /export/software</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">上传命令</span></span><br><span class="line">rz</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">上传完毕后解压</span></span><br><span class="line">tar -zxvf apache-hive-1.2.1-bin.tar.gz  -C /export/servers</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">进入解压后目录，然后运行命令</span></span><br><span class="line"><span class="meta">#</span><span class="bash">改名</span></span><br><span class="line">mv apache-hive-1.2.1-bin/ hive-1.2.1</span><br><span class="line"></span><br><span class="line">cd /export/servers/hive-1.2.1</span><br><span class="line"></span><br><span class="line">bin/hive</span><br></pre></td></tr></table></figure>
