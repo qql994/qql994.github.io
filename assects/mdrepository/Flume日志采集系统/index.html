@@ -15,15 +15,15 @@
 <meta property="og:site_name" content="球球狸的老人博客">
 <meta property="og:description" content="1.Flume概述1.1Flume运行机制Flume的核心是把数据从数据源（如Web Server）通过数据采集器（Source）收集过来，再将收集的数据通过缓冲通道（Channel）汇集到指定的接收器（Sink）。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="f:%5Cmd%E6%96%87%E6%A1%A3%E5%88%B6%E4%BD%9C%5CCentOS%5CHadoop%5CFlume%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E7%B3%BB%E7%BB%9F%5Cimg%5Ctelnet%E4%B8%8B%E8%BD%BD.png">
-<meta property="og:image" content="f:%5Cmd%E6%96%87%E6%A1%A3%E5%88%B6%E4%BD%9C%5CCentOS%5CHadoop%5CFlume%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E7%B3%BB%E7%BB%9F%5Cimg%5C%E9%87%87%E9%9B%86%E5%88%B0%E7%9A%84%E6%95%B0%E6%8D%AE.png">
-<meta property="og:image" content="f:%5Cmd%E6%96%87%E6%A1%A3%E5%88%B6%E4%BD%9C%5CCentOS%5CHadoop%5CFlume%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E7%B3%BB%E7%BB%9F%5Cimg%5C%E4%B8%8A%E4%BC%A0%E8%87%B3hdfs.png">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/Flume%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E7%B3%BB%E7%BB%9F/img/telnet%E4%B8%8B%E8%BD%BD.png">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/Flume%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E7%B3%BB%E7%BB%9F/img/%E9%87%87%E9%9B%86%E5%88%B0%E7%9A%84%E6%95%B0%E6%8D%AE.png">
+<meta property="og:image" content="http://yoursite.com/assects/mdrepository/Flume%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E7%B3%BB%E7%BB%9F/img/%E4%B8%8A%E4%BC%A0%E8%87%B3hdfs.png">
 <meta property="article:published_time" content="2020-10-02T05:16:56.000Z">
-<meta property="article:modified_time" content="2020-10-10T02:15:15.237Z">
+<meta property="article:modified_time" content="2020-10-13T02:54:43.426Z">
 <meta property="article:author" content="球球狸">
 <meta property="article:tag" content="Flume-ng">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="f:%5Cmd%E6%96%87%E6%A1%A3%E5%88%B6%E4%BD%9C%5CCentOS%5CHadoop%5CFlume%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E7%B3%BB%E7%BB%9F%5Cimg%5Ctelnet%E4%B8%8B%E8%BD%BD.png">
+<meta name="twitter:image" content="http://yoursite.com/assects/mdrepository/Flume%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E7%B3%BB%E7%BB%9F/img/telnet%E4%B8%8B%E8%BD%BD.png">
   
     <link rel="alternative" href="/atom.xml" title="球球狸的老人博客" type="application/atom+xml">
   
@@ -220,9 +220,9 @@
 <p>验证查看Flume采集数据的效果</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet localhost 44444</span><br></pre></td></tr></table></figure>
 
-<p><img src="F:%5Cmd%E6%96%87%E6%A1%A3%E5%88%B6%E4%BD%9C%5CCentOS%5CHadoop%5CFlume%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E7%B3%BB%E7%BB%9F%5Cimg%5Ctelnet%E4%B8%8B%E8%BD%BD.png" alt="telnet下载"></p>
+<p><img src="img/telnet%E4%B8%8B%E8%BD%BD.png" alt="telnet下载"></p>
 <p>在克隆监视的窗口上输入<strong>hello flume</strong>，可以看见原先的窗口中发生了变化</p>
-<p>![hello flume](F:\md文档制作\CentOS\Hadoop\Flume日志采集系统\img\hello flume.png)</p>
+<p>![hello flume](img/hello flume.png)</p>
 <h2 id="3-Flume的可靠性保证"><a href="#3-Flume的可靠性保证" class="headerlink" title="3.Flume的可靠性保证"></a>3.Flume的可靠性保证</h2><h3 id="3-1负载均衡"><a href="#3-1负载均衡" class="headerlink" title="3.1负载均衡"></a>3.1负载均衡</h3><p>​        负载均衡接收器处理器提供了在多个Sink上进行负载均衡流量的功能，维护了一个活跃的Sink索引列表，必须在其上分配负载，它支持使用round_robin（轮询）和random(随机)选择机制进行流量分配，其默认选择机制为round_robin，但可以通过配置进行覆盖，还支持继承AbstractSinkSelector的自定义类来自定义选择机制</p>
 <h4 id="3-1-1搭配并配置Flume机器"><a href="#3-1-1搭配并配置Flume机器" class="headerlink" title="3.1.1搭配并配置Flume机器"></a>3.1.1搭配并配置Flume机器</h4><p>将hadoop01上的Flume和profile配置文件使用scp命令传到另两个虚拟机上</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scp -r /export/servers/flume hadoop02:/export/servers/</span><br><span class="line">scp -r /export/servers/flume hadoop03:/export/servers/</span><br><span class="line">scp /etc/profile hadoop02:/etc/profile</span><br><span class="line">scp /etc/profile hadoop03:/etc/profile</span><br></pre></td></tr></table></figure>
@@ -245,16 +245,16 @@
 <p>从最后级的Flume机器上启动Flume，所以我们先分别启动hadoop02和03的Flume</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flume-ng agent --conf conf&#x2F; --conf-file conf&#x2F;avro-logger.conf --name a1 -Dflume.root.logger&#x3D;INFO,console</span><br></pre></td></tr></table></figure>
 
-<p>![Avro Source采集器启动成功](F:\md文档制作\CentOS\Hadoop\Flume日志采集系统\img\Avro Source采集器启动成功.png)</p>
+<p>![Avro Source采集器启动成功](img/Avro Source采集器启动成功.png)</p>
 <p>再启动hadoop01的Flume</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flume-ng agent --conf conf&#x2F; --conf-file conf&#x2F;exec-arvo.conf --name a1 -Dflume.root.logger&#x3D;INFO,console</span><br></pre></td></tr></table></figure>
 
-<p>![Rpc sink启动成功](F:\md文档制作\CentOS\Hadoop\Flume日志采集系统\img\Rpc sink启动成功.png)</p>
+<p>![Rpc sink启动成功](img/Rpc sink启动成功.png)</p>
 <p>在新的hadoop01克隆会话框中，执行以下指令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">while true; do echo &quot;access access ...&quot; &gt;&gt;&#x2F;root&#x2F;logs&#x2F;123.log; sleep 1;done</span><br></pre></td></tr></table></figure>
 
 <p>采集到的数据：</p>
-<p><img src="F:%5Cmd%E6%96%87%E6%A1%A3%E5%88%B6%E4%BD%9C%5CCentOS%5CHadoop%5CFlume%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E7%B3%BB%E7%BB%9F%5Cimg%5C%E9%87%87%E9%9B%86%E5%88%B0%E7%9A%84%E6%95%B0%E6%8D%AE.png" alt="采集到的数据"></p>
+<p><img src="img/%E9%87%87%E9%9B%86%E5%88%B0%E7%9A%84%E6%95%B0%E6%8D%AE.png" alt="采集到的数据"></p>
 <h2 id="4-案例——日志采集"><a href="#4-案例——日志采集" class="headerlink" title="4.案例——日志采集"></a>4.案例——日志采集</h2><h3 id="4-1配置采集方案"><a href="#4-1配置采集方案" class="headerlink" title="4.1配置采集方案"></a>4.1配置采集方案</h3><p>在hadoop02和03的/export/servers/flume/conf目录下，编写一个同样的日志采集方案exec-avro_logCollection.conf</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /export/servers/flume/conf</span><br><span class="line">vim exec-avro_logCollection.conf</span><br></pre></td></tr></table></figure>
 
@@ -274,7 +274,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while true; do echo &quot;access access ...&quot; &gt;&gt;&#x2F;root&#x2F;logs&#x2F;access.log; sleep 1;done</span><br><span class="line">while true; do echo &quot;nginx nginx ...&quot; &gt;&gt;&#x2F;root&#x2F;logs&#x2F;nginx.log; sleep 1;done</span><br><span class="line">while true; do echo &quot;web web ...&quot; &gt;&gt;&#x2F;root&#x2F;logs&#x2F;web.log; sleep 1;done</span><br></pre></td></tr></table></figure>
 
 <p>我们进入HDFS页面，可以看到如下画面</p>
-<p><img src="F:%5Cmd%E6%96%87%E6%A1%A3%E5%88%B6%E4%BD%9C%5CCentOS%5CHadoop%5CFlume%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E7%B3%BB%E7%BB%9F%5Cimg%5C%E4%B8%8A%E4%BC%A0%E8%87%B3hdfs.png" alt="上传至hdfs"></p>
+<p><img src="img/%E4%B8%8A%E4%BC%A0%E8%87%B3hdfs.png" alt="上传至hdfs"></p>
 
       
 
